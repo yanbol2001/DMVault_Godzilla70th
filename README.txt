@@ -1,9 +1,8 @@
-DMVault｜Godzilla 70th｜進化條件 V0.2
+DMVault Godzilla70th V0.3
 
-本版內容：
-- 以原試算表進化頁為基礎，保留原排列與分支。
-- 還原 Data2／atk 公式所引用的文字與點陣圖片。
-- 修正 V0.1 大量 #NAME? 顯示。
-- 保留縮放、適合寬度及拖曳瀏覽。
+內容：
+- index.html：進化頁 V0.3
+- dex.html：圖鑑頁 V0.3
+- assets：原試算表怪獸與攻擊點陣圖片
 
-直接開啟 index.html。
+本版完成圖鑑資料框架，共 34 隻怪獸。
