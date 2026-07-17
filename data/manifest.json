@@ -1,6 +1,6 @@
 {
   "project": "DMVault_Godzilla70th",
-  "version": "0.4",
+  "version": "0.5",
   "source_sheet": "進化條件",
   "html_rows": 447,
   "html_cells": 7967,
@@ -18,5 +18,16 @@
   "structured_files": [
     "data/evolution-cells.json",
     "data/monster-index.json"
-  ]
+  ],
+  "dex_monsters": 34,
+  "dex_stages": {
+    "幼年期Ⅰ": 1,
+    "幼年期Ⅱ": 1,
+    "成長期": 3,
+    "成熟期": 9,
+    "完全體": 10,
+    "究極體": 10
+  },
+  "dex_missing_images": [],
+  "dex_language": "繁體中文（正式名稱保留日文欄位）"
 }
