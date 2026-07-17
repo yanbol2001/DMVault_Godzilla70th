@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-
-<html lang="zh-Hant"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>DMVault｜Godzilla 70th｜圖鑑 V1.4</title><style>
-:root{--bg:#111315;--panel:#1a1e22;--line:#3a4249;--text:#f2f3f4;--muted:#aeb7bf;--paper:#f3f3f3;--ink:#111}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif}
-header{min-height:64px;display:flex;align-items:center;gap:18px;padding:10px 18px;background:#171a1d;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.brand{font-size:20px;font-weight:800;white-space:nowrap}.brand span{color:var(--muted);font-weight:600}.badge{font-size:12px;border:1px solid #68514d;background:#2a201f;padding:4px 8px;border-radius:999px;color:#f4c1b8}.nav{margin-left:auto;display:flex;gap:8px}.nav a{color:#fff;text-decoration:none;border:1px solid #4a535b;background:#242a2f;border-radius:8px;padding:8px 12px}.nav a.active{background:#4a3733;border-color:#85645e}.notice{padding:9px 18px;background:#22272b;color:#c6cdd2;border-bottom:1px solid var(--line);font-size:13px}
-main{max-width:1500px;margin:auto;padding:18px}.stage{margin-bottom:28px}.stage h2{margin:0 0 10px;padding:10px 12px;background:#2a2f34;border:1px solid var(--line);font-size:18px}.stage h2 span{float:right;color:var(--muted);font-size:13px;font-weight:500}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:12px}.monster-card{background:var(--paper);color:var(--ink);border:1px solid #929292}.monster-head{display:flex;align-items:center;min-height:118px;border-bottom:1px solid #999}.sprite{width:132px;align-self:stretch;display:flex;align-items:center;justify-content:center;background:#fff;border-right:1px solid #999}.sprite img{width:96px;height:96px;object-fit:contain;image-rendering:pixelated}.names{padding:12px}.names strong{display:block;font-size:19px}.names span{display:block;margin-top:5px;font-size:14px}.names small{display:block;margin-top:12px;color:#555}.stats{width:100%;border-collapse:collapse;font-size:13px}.stats th,.stats td{padding:6px 7px;border:1px solid #b6b6b6;text-align:left}.stats th{width:23%;background:#dedede;font-weight:600}.stats td{width:27%;background:#fafafa}.missing{color:#777}
-@media(max-width:720px){header{align-items:flex-start;flex-wrap:wrap;padding:10px 12px}.brand{font-size:17px}.nav{width:100%;margin-left:0}.nav a{flex:1;text-align:center}.notice{padding:8px 12px}main{padding:10px}.grid{grid-template-columns:1fr}.monster-head{min-height:102px}.sprite{width:112px}.sprite img{width:82px;height:82px}.stats{font-size:12px}.stats th,.stats td{padding:5px}}
-</style><style>
-header{position:sticky!important;top:0!important;z-index:999!important}.nav{overflow-x:auto;white-space:nowrap;flex-wrap:nowrap!important}.nav a{flex:0 0 auto}body{overflow-x:auto}
-</style><link href="shared.css?v=140" rel="stylesheet"/></head><body>
-<header class="dm-header"><div class="dm-brand">DMVault<span>｜ Godzilla 70th</span></div><div class="dm-badge">圖鑑 V1.4</div><nav class="dm-nav"><a href="index.html">進化</a><a class="active" href="dex.html">圖鑑</a><a href="stage.html">關卡</a><a href="background.html">背景</a><a href="gcell.html">G細胞</a><a href="encounter.html">隨機遭遇</a></nav></header>
-<div class="notice">依原始試算表 Data2 還原 34 隻怪獸的名稱、點陣圖與基礎數值；本版完成圖鑑資料整理與繁體中文階段名稱統一；搜尋、篩選與收藏功能留待後續版本。</div>
-<main><section class="stage"><h2>幼年期Ⅰ<span>1 隻</span></h2><div class="grid"><article class="monster-card" id="monster-0">
-<div class="monster-head">
-<div class="sprite"><img alt="黑球獸" src="assets/data2_a1_000.png"/></div>
-<div class="names"><strong>黑球獸</strong><span>ボタモン</span><small>圖鑑編號 0</small></div>
-</div>
-<table class="stats"><tbody>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>圖鑑｜DMVault Godzilla 70th</title><link rel="stylesheet" href="shared.css?v=150"><style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0,#281442,transparent 34%),#09070d;color:#fff;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif}main{padding:16px}.hero{max-width:1500px;margin:0 auto 14px;background:linear-gradient(145deg,#1c1427,#120e19);border:1px solid #4a385f;border-left:4px solid #8b5cf6;border-radius:16px;padding:14px 18px;box-shadow:0 12px 30px #0006}.hero h1{margin:0 0 5px}.hero p{margin:0;color:#c4b8d3}.tree-tools{max-width:1500px;margin:0 auto 14px;display:flex;gap:10px}.tree-tools input{width:100%;background:#110c18;color:#fff;border:1px solid #59436f;border-radius:11px;padding:12px 14px;font-size:16px}.tree-board{max-width:1800px;margin:auto;display:grid;grid-template-columns:repeat(6,minmax(210px,1fr));gap:12px;align-items:start;overflow-x:auto;padding-bottom:18px}.tree-column{background:#120d19;border:1px solid #4a385f;border-radius:15px;padding:8px;min-width:210px;box-shadow:0 13px 30px #0006}.tree-column h2{margin:0 0 9px;padding:10px;background:linear-gradient(135deg,#2a153e,#6d28d9);border-radius:10px;text-align:center;font-size:17px}.tree-column h2 small{display:block;color:#ddd0ef;font-size:11px;margin-top:3px}.node-stack{display:flex;flex-direction:column;gap:9px}.tree-node{position:relative}.tree-node:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-9px;width:2px;height:9px;background:#8b5cf6}.node-main{width:100%;border:1px solid #5a4371;background:#fff;color:#17111f;border-radius:12px;padding:8px;display:flex;align-items:center;gap:9px;text-align:left;cursor:pointer;box-shadow:0 7px 18px #0005}.node-main:hover{border-color:#b794f6;transform:translateY(-1px)}.node-main img{width:58px;height:58px;object-fit:contain;image-rendering:pixelated;flex:0 0 58px}.node-main span{min-width:0}.node-main strong{display:block;font-size:16px}.node-main small,.node-main em{display:block;color:#645a6c;font-size:11px;font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.node-detail{display:none;background:#fff;color:#111;border:1px solid #8b5cf6;border-radius:0 0 12px 12px;overflow:auto}.tree-node.open .node-main{border-radius:12px 12px 0 0;background:#f4edff}.tree-node.open .node-detail{display:block}.stats{border-collapse:collapse;width:100%;font-size:12px}.stats th,.stats td{border:1px solid #ddd;padding:5px;text-align:center}.stats th{background:#f3ecfa}.tree-node.filtered{display:none}@media(max-width:900px){.tree-board{grid-template-columns:repeat(6,210px)}}
+</style></head><body><header class="dm-header"><div class="dm-brand">DMVault <span>| Godzilla 70th</span></div><div class="dm-badge">圖鑑 V1.5 技能樹</div><nav class="dm-nav"><a href="index.html">進化</a><a class="active" href="dex.html">圖鑑</a><a href="stage.html">關卡</a><a href="background.html">背景</a><a href="gcell.html">G細胞</a><a href="encounter.html">隨機遭遇</a></nav></header><main><section class="hero"><h1>怪獸圖鑑技能樹</h1><p>依成長階段由左至右排列；點擊怪獸節點展開完整資料。</p></section><div class="tree-tools"><input id="dexSearch" type="search" placeholder="搜尋中文、日文名稱或圖鑑編號…"></div><div class="tree-board"><section class="tree-column"><h2>幼年期Ⅰ<small>1 隻</small></h2><div class="node-stack"><article class="tree-node" id="monster-0"><button class="node-main" type="button"><img src="assets/data2_a1_000.png" alt="黑球獸"><span><strong>黑球獸</strong><small>ボタモン</small><em>圖鑑編號 0</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>幼年期Ⅰ</td><th>屬性</th><td>無屬性</td></tr>
 <tr><th>體力值</th><td>0</td><th>最低體重</th><td>5 g</td></tr>
 <tr><th>進化時間</th><td>10 分鐘</td><th>睡眠開始</th><td>00:00</td></tr>
@@ -24,13 +8,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>3 分</td><th>可治療次數</th><td>65535</td></tr>
 <tr><th>遭遇時間組</th><td>—</td><th>遭遇對手組</th><td>—</td></tr>
 <tr><th>強度</th><td>0</td><th>攻擊點陣 ID</th><td>0</td></tr>
-</tbody></table>
-</article></div></section><section class="stage"><h2>幼年期Ⅱ<span>1 隻</span></h2><div class="grid"><article class="monster-card" id="monster-1">
-<div class="monster-head">
-<div class="sprite"><img alt="滾球獸" src="assets/data2_a2_002.png"/></div>
-<div class="names"><strong>滾球獸</strong><span>コロモン</span><small>圖鑑編號 1</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article></div></section><section class="tree-column"><h2>幼年期Ⅱ<small>1 隻</small></h2><div class="node-stack"><article class="tree-node" id="monster-1"><button class="node-main" type="button"><img src="assets/data2_a2_002.png" alt="滾球獸"><span><strong>滾球獸</strong><small>コロモン</small><em>圖鑑編號 1</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>幼年期Ⅱ</td><th>屬性</th><td>無屬性</td></tr>
 <tr><th>體力值</th><td>0</td><th>最低體重</th><td>10 g</td></tr>
 <tr><th>進化時間</th><td>12 小時</td><th>睡眠開始</th><td>20:00</td></tr>
@@ -38,13 +16,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>60 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>—</td><th>遭遇對手組</th><td>—</td></tr>
 <tr><th>強度</th><td>0</td><th>攻擊點陣 ID</th><td>0</td></tr>
-</tbody></table>
-</article></div></section><section class="stage"><h2>成長期<span>3 隻</span></h2><div class="grid"><article class="monster-card" id="monster-2">
-<div class="monster-head">
-<div class="sprite"><img alt="幼期哥吉拉" src="assets/data2_a3_004.png"/></div>
-<div class="names"><strong>幼期哥吉拉</strong><span>ベビーゴジラ</span><small>圖鑑編號 2</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article></div></section><section class="tree-column"><h2>成長期<small>3 隻</small></h2><div class="node-stack"><article class="tree-node" id="monster-2"><button class="node-main" type="button"><img src="assets/data2_a3_004.png" alt="幼期哥吉拉"><span><strong>幼期哥吉拉</strong><small>ベビーゴジラ</small><em>圖鑑編號 2</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>成長期</td><th>屬性</th><td>病毒種</td></tr>
 <tr><th>體力值</th><td>20</td><th>最低體重</th><td>20 g</td></tr>
 <tr><th>進化時間</th><td>24 小時</td><th>睡眠開始</th><td>21:00</td></tr>
@@ -52,13 +24,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>0</td><th>遭遇對手組</th><td>0</td></tr>
 <tr><th>強度</th><td>30</td><th>攻擊點陣 ID</th><td>26</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-3">
-<div class="monster-head">
-<div class="sprite"><img alt="亞古獸" src="assets/data2_a4_006.png"/></div>
-<div class="names"><strong>亞古獸</strong><span>アグモン</span><small>圖鑑編號 3</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-3"><button class="node-main" type="button"><img src="assets/data2_a4_006.png" alt="亞古獸"><span><strong>亞古獸</strong><small>アグモン</small><em>圖鑑編號 3</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>成長期</td><th>屬性</th><td>疫苗種</td></tr>
 <tr><th>體力值</th><td>20</td><th>最低體重</th><td>20 g</td></tr>
 <tr><th>進化時間</th><td>24 小時</td><th>睡眠開始</th><td>20:00</td></tr>
@@ -66,13 +32,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>2</td></tr>
 <tr><th>遭遇時間組</th><td>1</td><th>遭遇對手組</th><td>0</td></tr>
 <tr><th>強度</th><td>25</td><th>攻擊點陣 ID</th><td>1</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-4">
-<div class="monster-head">
-<div class="sprite"><img alt="單角龍獸" src="assets/data2_a5_008.png"/></div>
-<div class="names"><strong>單角龍獸</strong><span>モノドラモン</span><small>圖鑑編號 4</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-4"><button class="node-main" type="button"><img src="assets/data2_a5_008.png" alt="單角龍獸"><span><strong>單角龍獸</strong><small>モノドラモン</small><em>圖鑑編號 4</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>成長期</td><th>屬性</th><td>資料種</td></tr>
 <tr><th>體力值</th><td>20</td><th>最低體重</th><td>40 g</td></tr>
 <tr><th>進化時間</th><td>24 小時</td><th>睡眠開始</th><td>22:00</td></tr>
@@ -80,13 +40,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>2</td></tr>
 <tr><th>遭遇時間組</th><td>0</td><th>遭遇對手組</th><td>0</td></tr>
 <tr><th>強度</th><td>22</td><th>攻擊點陣 ID</th><td>20</td></tr>
-</tbody></table>
-</article></div></section><section class="stage"><h2>成熟期<span>9 隻</span></h2><div class="grid"><article class="monster-card" id="monster-5">
-<div class="monster-head">
-<div class="sprite"><img alt="力多爾哥吉拉" src="assets/data2_a6_010.png"/></div>
-<div class="names"><strong>力多爾哥吉拉</strong><span>レドゴジラ</span><small>圖鑑編號 5</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article></div></section><section class="tree-column"><h2>成熟期<small>9 隻</small></h2><div class="node-stack"><article class="tree-node" id="monster-5"><button class="node-main" type="button"><img src="assets/data2_a6_010.png" alt="力多爾哥吉拉"><span><strong>力多爾哥吉拉</strong><small>レドゴジラ</small><em>圖鑑編號 5</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>成熟期</td><th>屬性</th><td>病毒種</td></tr>
 <tr><th>體力值</th><td>30</td><th>最低體重</th><td>40 g</td></tr>
 <tr><th>進化時間</th><td>36 小時</td><th>睡眠開始</th><td>22:00</td></tr>
@@ -94,13 +48,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>2</td><th>遭遇對手組</th><td>1</td></tr>
 <tr><th>強度</th><td>52</td><th>攻擊點陣 ID</th><td>68</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-6">
-<div class="monster-head">
-<div class="sprite"><img alt="暴龍獸" src="assets/data2_a7_012.png"/></div>
-<div class="names"><strong>暴龍獸</strong><span>グレイモン</span><small>圖鑑編號 6</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-6"><button class="node-main" type="button"><img src="assets/data2_a7_012.png" alt="暴龍獸"><span><strong>暴龍獸</strong><small>グレイモン</small><em>圖鑑編號 6</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>成熟期</td><th>屬性</th><td>疫苗種</td></tr>
 <tr><th>體力值</th><td>30</td><th>最低體重</th><td>30 g</td></tr>
 <tr><th>進化時間</th><td>36 小時</td><th>睡眠開始</th><td>23:00</td></tr>
@@ -108,13 +56,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>4</td><th>遭遇對手組</th><td>2</td></tr>
 <tr><th>強度</th><td>50</td><th>攻擊點陣 ID</th><td>3</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-7">
-<div class="monster-head">
-<div class="sprite"><img alt="碧奧蘭蒂" src="assets/data2_a8_014.png"/></div>
-<div class="names"><strong>碧奧蘭蒂</strong><span>ビオランテ</span><small>圖鑑編號 7</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-7"><button class="node-main" type="button"><img src="assets/data2_a8_014.png" alt="碧奧蘭蒂"><span><strong>碧奧蘭蒂</strong><small>ビオランテ</small><em>圖鑑編號 7</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>成熟期</td><th>屬性</th><td>資料種</td></tr>
 <tr><th>體力值</th><td>30</td><th>最低體重</th><td>40 g</td></tr>
 <tr><th>進化時間</th><td>36 小時</td><th>睡眠開始</th><td>21:00</td></tr>
@@ -122,13 +64,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>3</td><th>遭遇對手組</th><td>1</td></tr>
 <tr><th>強度</th><td>40</td><th>攻擊點陣 ID</th><td>91</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-8">
-<div class="monster-head">
-<div class="sprite"><img alt="哥吉拉龍" src="assets/data2_a9_016.png"/></div>
-<div class="names"><strong>哥吉拉龍</strong><span>ゴジラザウルス</span><small>圖鑑編號 8</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-8"><button class="node-main" type="button"><img src="assets/data2_a9_016.png" alt="哥吉拉龍"><span><strong>哥吉拉龍</strong><small>ゴジラザウルス</small><em>圖鑑編號 8</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>成熟期</td><th>屬性</th><td>病毒種</td></tr>
 <tr><th>體力值</th><td>30</td><th>最低體重</th><td>20 g</td></tr>
 <tr><th>進化時間</th><td>36 小時</td><th>睡眠開始</th><td>22:00</td></tr>
@@ -136,13 +72,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>4</td><th>遭遇對手組</th><td>2</td></tr>
 <tr><th>強度</th><td>46</td><th>攻擊點陣 ID</th><td>26</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-9">
-<div class="monster-head">
-<div class="sprite"><img alt="爛泥獸" src="assets/data2_a10_018.png"/></div>
-<div class="names"><strong>爛泥獸</strong><span>レアモン</span><small>圖鑑編號 9</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-9"><button class="node-main" type="button"><img src="assets/data2_a10_018.png" alt="爛泥獸"><span><strong>爛泥獸</strong><small>レアモン</small><em>圖鑑編號 9</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>成熟期</td><th>屬性</th><td>病毒種</td></tr>
 <tr><th>體力值</th><td>30</td><th>最低體重</th><td>20 g</td></tr>
 <tr><th>進化時間</th><td>36 小時</td><th>睡眠開始</th><td>22:00</td></tr>
@@ -150,13 +80,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>3</td></tr>
 <tr><th>遭遇時間組</th><td>2</td><th>遭遇對手組</th><td>1</td></tr>
 <tr><th>強度</th><td>40</td><th>攻擊點陣 ID</th><td>15</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-10">
-<div class="monster-head">
-<div class="sprite"><img alt="蓋剛" src="assets/data2_a11_020.png"/></div>
-<div class="names"><strong>蓋剛</strong><span>ガイガン</span><small>圖鑑編號 10</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-10"><button class="node-main" type="button"><img src="assets/data2_a11_020.png" alt="蓋剛"><span><strong>蓋剛</strong><small>ガイガン</small><em>圖鑑編號 10</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>成熟期</td><th>屬性</th><td>資料種</td></tr>
 <tr><th>體力值</th><td>30</td><th>最低體重</th><td>40 g</td></tr>
 <tr><th>進化時間</th><td>36 小時</td><th>睡眠開始</th><td>22:00</td></tr>
@@ -164,13 +88,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>2</td></tr>
 <tr><th>遭遇時間組</th><td>4</td><th>遭遇對手組</th><td>2</td></tr>
 <tr><th>強度</th><td>45</td><th>攻擊點陣 ID</th><td>20</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-11">
-<div class="monster-head">
-<div class="sprite"><img alt="摩斯拉" src="assets/data2_a12_022.png"/></div>
-<div class="names"><strong>摩斯拉</strong><span>モスラ</span><small>圖鑑編號 11</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-11"><button class="node-main" type="button"><img src="assets/data2_a12_022.png" alt="摩斯拉"><span><strong>摩斯拉</strong><small>モスラ</small><em>圖鑑編號 11</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>成熟期</td><th>屬性</th><td>資料種</td></tr>
 <tr><th>體力值</th><td>30</td><th>最低體重</th><td>20 g</td></tr>
 <tr><th>進化時間</th><td>36 小時</td><th>睡眠開始</th><td>21:00</td></tr>
@@ -178,13 +96,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>3</td></tr>
 <tr><th>遭遇時間組</th><td>2</td><th>遭遇對手組</th><td>1</td></tr>
 <tr><th>強度</th><td>42</td><th>攻擊點陣 ID</th><td>91</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-12">
-<div class="monster-head">
-<div class="sprite"><img alt="王者基多拉" src="assets/data2_a13_024.png"/></div>
-<div class="names"><strong>王者基多拉</strong><span>キングギドラ</span><small>圖鑑編號 12</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-12"><button class="node-main" type="button"><img src="assets/data2_a13_024.png" alt="王者基多拉"><span><strong>王者基多拉</strong><small>キングギドラ</small><em>圖鑑編號 12</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>成熟期</td><th>屬性</th><td>資料種</td></tr>
 <tr><th>體力值</th><td>30</td><th>最低體重</th><td>60 g</td></tr>
 <tr><th>進化時間</th><td>36 小時</td><th>睡眠開始</th><td>22:00</td></tr>
@@ -192,13 +104,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>2</td></tr>
 <tr><th>遭遇時間組</th><td>3</td><th>遭遇對手組</th><td>1</td></tr>
 <tr><th>強度</th><td>48</td><th>攻擊點陣 ID</th><td>4</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-13">
-<div class="monster-head">
-<div class="sprite"><img alt="拉頓" src="assets/data2_a14_026.png"/></div>
-<div class="names"><strong>拉頓</strong><span>ラドン</span><small>圖鑑編號 13</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-13"><button class="node-main" type="button"><img src="assets/data2_a14_026.png" alt="拉頓"><span><strong>拉頓</strong><small>ラドン</small><em>圖鑑編號 13</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>成熟期</td><th>屬性</th><td>資料種</td></tr>
 <tr><th>體力值</th><td>30</td><th>最低體重</th><td>40 g</td></tr>
 <tr><th>進化時間</th><td>36 小時</td><th>睡眠開始</th><td>22:00</td></tr>
@@ -206,13 +112,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>2</td></tr>
 <tr><th>遭遇時間組</th><td>4</td><th>遭遇對手組</th><td>2</td></tr>
 <tr><th>強度</th><td>45</td><th>攻擊點陣 ID</th><td>5</td></tr>
-</tbody></table>
-</article></div></section><section class="stage"><h2>完全體<span>10 隻</span></h2><div class="grid"><article class="monster-card" id="monster-14">
-<div class="monster-head">
-<div class="sprite"><img alt="哥吉拉二世" src="assets/data2_a15_028.png"/></div>
-<div class="names"><strong>哥吉拉二世</strong><span>ゴジラジュニア</span><small>圖鑑編號 14</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article></div></section><section class="tree-column"><h2>完全體<small>10 隻</small></h2><div class="node-stack"><article class="tree-node" id="monster-14"><button class="node-main" type="button"><img src="assets/data2_a15_028.png" alt="哥吉拉二世"><span><strong>哥吉拉二世</strong><small>ゴジラジュニア</small><em>圖鑑編號 14</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>完全體</td><th>屬性</th><td>病毒種</td></tr>
 <tr><th>體力值</th><td>40</td><th>最低體重</th><td>50 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>23:00</td></tr>
@@ -220,13 +120,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>4</td><th>遭遇對手組</th><td>3</td></tr>
 <tr><th>強度</th><td>95</td><th>攻擊點陣 ID</th><td>1</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-15">
-<div class="monster-head">
-<div class="sprite"><img alt="機械暴龍獸：G侵蝕模式" src="assets/data2_a16_030.png"/></div>
-<div class="names"><strong>機械暴龍獸：G侵蝕模式</strong><span>メタルグレイモン：「G」侵食モード</span><small>圖鑑編號 15</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-15"><button class="node-main" type="button"><img src="assets/data2_a16_030.png" alt="機械暴龍獸：G侵蝕模式"><span><strong>機械暴龍獸：G侵蝕模式</strong><small>メタルグレイモン：「G」侵食モード</small><em>圖鑑編號 15</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>完全體</td><th>屬性</th><td>疫苗種</td></tr>
 <tr><th>體力值</th><td>50</td><th>最低體重</th><td>40 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>22:00</td></tr>
@@ -234,13 +128,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>7</td><th>遭遇對手組</th><td>5</td></tr>
 <tr><th>強度</th><td>110</td><th>攻擊點陣 ID</th><td>2</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-16">
-<div class="monster-head">
-<div class="sprite"><img alt="機械暴龍獸" src="assets/data2_a17_032.png"/></div>
-<div class="names"><strong>機械暴龍獸</strong><span>メタルグレイモン</span><small>圖鑑編號 16</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-16"><button class="node-main" type="button"><img src="assets/data2_a17_032.png" alt="機械暴龍獸"><span><strong>機械暴龍獸</strong><small>メタルグレイモン</small><em>圖鑑編號 16</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>完全體</td><th>屬性</th><td>疫苗種</td></tr>
 <tr><th>體力值</th><td>40</td><th>最低體重</th><td>40 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>22:00</td></tr>
@@ -248,13 +136,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>6</td><th>遭遇對手組</th><td>4</td></tr>
 <tr><th>強度</th><td>90</td><th>攻擊點陣 ID</th><td>2</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-17">
-<div class="monster-head">
-<div class="sprite"><img alt="太空哥吉拉" src="assets/data2_a18_034.png"/></div>
-<div class="names"><strong>太空哥吉拉</strong><span>スペースゴジラ</span><small>圖鑑編號 17</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-17"><button class="node-main" type="button"><img src="assets/data2_a18_034.png" alt="太空哥吉拉"><span><strong>太空哥吉拉</strong><small>スペースゴジラ</small><em>圖鑑編號 17</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>完全體</td><th>屬性</th><td>資料種</td></tr>
 <tr><th>體力值</th><td>40</td><th>最低體重</th><td>40 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>23:00</td></tr>
@@ -262,13 +144,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>4</td><th>遭遇對手組</th><td>3</td></tr>
 <tr><th>強度</th><td>78</td><th>攻擊點陣 ID</th><td>16</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-18">
-<div class="monster-head">
-<div class="sprite"><img alt="哥吉拉1954" src="assets/data2_a19_036.png"/></div>
-<div class="names"><strong>哥吉拉1954</strong><span>ゴジラ1954</span><small>圖鑑編號 18</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-18"><button class="node-main" type="button"><img src="assets/data2_a19_036.png" alt="哥吉拉1954"><span><strong>哥吉拉1954</strong><small>ゴジラ1954</small><em>圖鑑編號 18</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>完全體</td><th>屬性</th><td>病毒種</td></tr>
 <tr><th>體力值</th><td>40</td><th>最低體重</th><td>50 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>23:00</td></tr>
@@ -276,13 +152,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>5</td><th>遭遇對手組</th><td>4</td></tr>
 <tr><th>強度</th><td>90</td><th>攻擊點陣 ID</th><td>75</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-19">
-<div class="monster-head">
-<div class="sprite"><img alt="喪屍暴龍獸：G侵蝕模式" src="assets/data2_a20_038.png"/></div>
-<div class="names"><strong>喪屍暴龍獸：G侵蝕模式</strong><span>スカルグレイモン：「G」侵食モード</span><small>圖鑑編號 19</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-19"><button class="node-main" type="button"><img src="assets/data2_a20_038.png" alt="喪屍暴龍獸：G侵蝕模式"><span><strong>喪屍暴龍獸：G侵蝕模式</strong><small>スカルグレイモン：「G」侵食モード</small><em>圖鑑編號 19</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>完全體</td><th>屬性</th><td>病毒種</td></tr>
 <tr><th>體力值</th><td>40</td><th>最低體重</th><td>40 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>22:00</td></tr>
@@ -290,13 +160,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>3</td></tr>
 <tr><th>遭遇時間組</th><td>7</td><th>遭遇對手組</th><td>5</td></tr>
 <tr><th>強度</th><td>100</td><th>攻擊點陣 ID</th><td>116</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-20">
-<div class="monster-head">
-<div class="sprite"><img alt="吉拉" src="assets/data2_a21_040.png"/></div>
-<div class="names"><strong>吉拉</strong><span>ジラ</span><small>圖鑑編號 20</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-20"><button class="node-main" type="button"><img src="assets/data2_a21_040.png" alt="吉拉"><span><strong>吉拉</strong><small>ジラ</small><em>圖鑑編號 20</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>完全體</td><th>屬性</th><td>資料種</td></tr>
 <tr><th>體力值</th><td>40</td><th>最低體重</th><td>30 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>22:00</td></tr>
@@ -304,13 +168,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>2</td></tr>
 <tr><th>遭遇時間組</th><td>4</td><th>遭遇對手組</th><td>3</td></tr>
 <tr><th>強度</th><td>70</td><th>攻擊點陣 ID</th><td>26</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-21">
-<div class="monster-head">
-<div class="sprite"><img alt="三式機龍改" src="assets/data2_a22_042.png"/></div>
-<div class="names"><strong>三式機龍改</strong><span>三式機竜改</span><small>圖鑑編號 21</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-21"><button class="node-main" type="button"><img src="assets/data2_a22_042.png" alt="三式機龍改"><span><strong>三式機龍改</strong><small>三式機竜改</small><em>圖鑑編號 21</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>完全體</td><th>屬性</th><td>病毒種</td></tr>
 <tr><th>體力值</th><td>40</td><th>最低體重</th><td>40 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>23:00</td></tr>
@@ -318,13 +176,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>7</td><th>遭遇對手組</th><td>4</td></tr>
 <tr><th>強度</th><td>85</td><th>攻擊點陣 ID</th><td>33</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-22">
-<div class="monster-head">
-<div class="sprite"><img alt="機械王者基多拉" src="assets/data2_a23_044.png"/></div>
-<div class="names"><strong>機械王者基多拉</strong><span>メカキングギドラ</span><small>圖鑑編號 22</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-22"><button class="node-main" type="button"><img src="assets/data2_a23_044.png" alt="機械王者基多拉"><span><strong>機械王者基多拉</strong><small>メカキングギドラ</small><em>圖鑑編號 22</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>完全體</td><th>屬性</th><td>資料種</td></tr>
 <tr><th>體力值</th><td>40</td><th>最低體重</th><td>80 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>23:00</td></tr>
@@ -332,13 +184,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>2</td></tr>
 <tr><th>遭遇時間組</th><td>5</td><th>遭遇對手組</th><td>4</td></tr>
 <tr><th>強度</th><td>78</td><th>攻擊點陣 ID</th><td>81</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-23">
-<div class="monster-head">
-<div class="sprite"><img alt="火之拉頓" src="assets/data2_a24_046.png"/></div>
-<div class="names"><strong>火之拉頓</strong><span>ファイヤーラドン</span><small>圖鑑編號 23</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-23"><button class="node-main" type="button"><img src="assets/data2_a24_046.png" alt="火之拉頓"><span><strong>火之拉頓</strong><small>ファイヤーラドン</small><em>圖鑑編號 23</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>完全體</td><th>屬性</th><td>資料種</td></tr>
 <tr><th>體力值</th><td>40</td><th>最低體重</th><td>40 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>22:00</td></tr>
@@ -346,13 +192,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>2</td></tr>
 <tr><th>遭遇時間組</th><td>3</td><th>遭遇對手組</th><td>3</td></tr>
 <tr><th>強度</th><td>80</td><th>攻擊點陣 ID</th><td>78</td></tr>
-</tbody></table>
-</article></div></section><section class="stage"><h2>究極體<span>10 隻</span></h2><div class="grid"><article class="monster-card" id="monster-24">
-<div class="monster-head">
-<div class="sprite"><img alt="哥吉拉1994" src="assets/data2_a25_048.png"/></div>
-<div class="names"><strong>哥吉拉1994</strong><span>ゴジラ1994</span><small>圖鑑編號 24</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article></div></section><section class="tree-column"><h2>究極體<small>10 隻</small></h2><div class="node-stack"><article class="tree-node" id="monster-24"><button class="node-main" type="button"><img src="assets/data2_a25_048.png" alt="哥吉拉1994"><span><strong>哥吉拉1994</strong><small>ゴジラ1994</small><em>圖鑑編號 24</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>究極體</td><th>屬性</th><td>病毒種</td></tr>
 <tr><th>體力值</th><td>50</td><th>最低體重</th><td>50 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>24:00</td></tr>
@@ -360,13 +200,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>5</td><th>遭遇對手組</th><td>6</td></tr>
 <tr><th>強度</th><td>170</td><th>攻擊點陣 ID</th><td>1</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-25">
-<div class="monster-head">
-<div class="sprite"><img alt="戰鬥暴龍獸：G侵蝕模式" src="assets/data2_a26_050.png"/></div>
-<div class="names"><strong>戰鬥暴龍獸：G侵蝕模式</strong><span>ウォーグレイモン：「G」侵食モード</span><small>圖鑑編號 25</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-25"><button class="node-main" type="button"><img src="assets/data2_a26_050.png" alt="戰鬥暴龍獸：G侵蝕模式"><span><strong>戰鬥暴龍獸：G侵蝕模式</strong><small>ウォーグレイモン：「G」侵食モード</small><em>圖鑑編號 25</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>究極體</td><th>屬性</th><td>疫苗種</td></tr>
 <tr><th>體力值</th><td>50</td><th>最低體重</th><td>20 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>23:00</td></tr>
@@ -374,13 +208,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>7</td><th>遭遇對手組</th><td>7</td></tr>
 <tr><th>強度</th><td>190</td><th>攻擊點陣 ID</th><td>13</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-26">
-<div class="monster-head">
-<div class="sprite"><img alt="戰鬥暴龍獸" src="assets/data2_a27_052.png"/></div>
-<div class="names"><strong>戰鬥暴龍獸</strong><span>ウォーグレイモン</span><small>圖鑑編號 26</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-26"><button class="node-main" type="button"><img src="assets/data2_a27_052.png" alt="戰鬥暴龍獸"><span><strong>戰鬥暴龍獸</strong><small>ウォーグレイモン</small><em>圖鑑編號 26</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>究極體</td><th>屬性</th><td>疫苗種</td></tr>
 <tr><th>體力值</th><td>50</td><th>最低體重</th><td>20 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>23:00</td></tr>
@@ -388,13 +216,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>6</td><th>遭遇對手組</th><td>5</td></tr>
 <tr><th>強度</th><td>145</td><th>攻擊點陣 ID</th><td>34</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-27">
-<div class="monster-head">
-<div class="sprite"><img alt="戴斯特洛伊亞" src="assets/data2_a28_054.png"/></div>
-<div class="names"><strong>戴斯特洛伊亞</strong><span>デストロイア</span><small>圖鑑編號 27</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-27"><button class="node-main" type="button"><img src="assets/data2_a28_054.png" alt="戴斯特洛伊亞"><span><strong>戴斯特洛伊亞</strong><small>デストロイア</small><em>圖鑑編號 27</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>究極體</td><th>屬性</th><td>資料種</td></tr>
 <tr><th>體力值</th><td>50</td><th>最低體重</th><td>60 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>24:00</td></tr>
@@ -402,13 +224,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>2</td></tr>
 <tr><th>遭遇時間組</th><td>5</td><th>遭遇對手組</th><td>5</td></tr>
 <tr><th>強度</th><td>155</td><th>攻擊點陣 ID</th><td>30</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-28">
-<div class="monster-head">
-<div class="sprite"><img alt="哥吉拉1999" src="assets/data2_a29_056.png"/></div>
-<div class="names"><strong>哥吉拉1999</strong><span>ゴジラ1999</span><small>圖鑑編號 28</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-28"><button class="node-main" type="button"><img src="assets/data2_a29_056.png" alt="哥吉拉1999"><span><strong>哥吉拉1999</strong><small>ゴジラ1999</small><em>圖鑑編號 28</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>究極體</td><th>屬性</th><td>病毒種</td></tr>
 <tr><th>體力值</th><td>50</td><th>最低體重</th><td>70 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>23:00</td></tr>
@@ -416,13 +232,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>6</td><th>遭遇對手組</th><td>6</td></tr>
 <tr><th>強度</th><td>170</td><th>攻擊點陣 ID</th><td>78</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-29">
-<div class="monster-head">
-<div class="sprite"><img alt="機械邪龍獸：3式(改)模式" src="assets/data2_a30_058.png"/></div>
-<div class="names"><strong>機械邪龍獸：3式(改)模式</strong><span>ムゲンドラモン：3式〈改〉モード</span><small>圖鑑編號 29</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-29"><button class="node-main" type="button"><img src="assets/data2_a30_058.png" alt="機械邪龍獸：3式(改)模式"><span><strong>機械邪龍獸：3式(改)模式</strong><small>ムゲンドラモン：3式〈改〉モード</small><em>圖鑑編號 29</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>究極體</td><th>屬性</th><td>病毒種</td></tr>
 <tr><th>體力值</th><td>50</td><th>最低體重</th><td>50 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>23:00</td></tr>
@@ -430,13 +240,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>6</td><th>遭遇對手組</th><td>7</td></tr>
 <tr><th>強度</th><td>185</td><th>攻擊點陣 ID</th><td>30</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-30">
-<div class="monster-head">
-<div class="sprite"><img alt="機械哥吉拉" src="assets/data2_a31_060.png"/></div>
-<div class="names"><strong>機械哥吉拉</strong><span>メカゴジラ</span><small>圖鑑編號 30</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-30"><button class="node-main" type="button"><img src="assets/data2_a31_060.png" alt="機械哥吉拉"><span><strong>機械哥吉拉</strong><small>メカゴジラ</small><em>圖鑑編號 30</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>究極體</td><th>屬性</th><td>資料種</td></tr>
 <tr><th>體力值</th><td>50</td><th>最低體重</th><td>40 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>23:00</td></tr>
@@ -444,13 +248,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>2</td></tr>
 <tr><th>遭遇時間組</th><td>7</td><th>遭遇對手組</th><td>5</td></tr>
 <tr><th>強度</th><td>160</td><th>攻擊點陣 ID</th><td>33</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-31">
-<div class="monster-head">
-<div class="sprite"><img alt="燃燒的哥吉拉" src="assets/data2_a32_062.png"/></div>
-<div class="names"><strong>燃燒的哥吉拉</strong><span>バーニングゴジラ</span><small>圖鑑編號 31</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-31"><button class="node-main" type="button"><img src="assets/data2_a32_062.png" alt="燃燒的哥吉拉"><span><strong>燃燒的哥吉拉</strong><small>バーニングゴジラ</small><em>圖鑑編號 31</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>究極體</td><th>屬性</th><td>病毒種</td></tr>
 <tr><th>體力值</th><td>50</td><th>最低體重</th><td>40 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>24:00</td></tr>
@@ -458,13 +256,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>1</td></tr>
 <tr><th>遭遇時間組</th><td>5</td><th>遭遇對手組</th><td>6</td></tr>
 <tr><th>強度</th><td>220</td><th>攻擊點陣 ID</th><td>3</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-32">
-<div class="monster-head">
-<div class="sprite"><img alt="小哥吉拉" src="assets/data2_a33_064.png"/></div>
-<div class="names"><strong>小哥吉拉</strong><span>ちびゴジラ</span><small>圖鑑編號 32</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-32"><button class="node-main" type="button"><img src="assets/data2_a33_064.png" alt="小哥吉拉"><span><strong>小哥吉拉</strong><small>ちびゴジラ</small><em>圖鑑編號 32</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>究極體</td><th>屬性</th><td>病毒種</td></tr>
 <tr><th>體力值</th><td>50</td><th>最低體重</th><td>20 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>21:00</td></tr>
@@ -472,13 +264,7 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>2</td></tr>
 <tr><th>遭遇時間組</th><td>2</td><th>遭遇對手組</th><td>5</td></tr>
 <tr><th>強度</th><td>130</td><th>攻擊點陣 ID</th><td>1</td></tr>
-</tbody></table>
-</article><article class="monster-card" id="monster-33">
-<div class="monster-head">
-<div class="sprite"><img alt="小機械哥吉拉" src="assets/data2_a34_066.png"/></div>
-<div class="names"><strong>小機械哥吉拉</strong><span>ちびメカゴジラ</span><small>圖鑑編號 33</small></div>
-</div>
-<table class="stats"><tbody>
+</tbody></table></div></article><article class="tree-node" id="monster-33"><button class="node-main" type="button"><img src="assets/data2_a34_066.png" alt="小機械哥吉拉"><span><strong>小機械哥吉拉</strong><small>ちびメカゴジラ</small><em>圖鑑編號 33</em></span></button><div class="node-detail"><table class="stats"><tbody>
 <tr><th>階段</th><td>究極體</td><th>屬性</th><td>資料種</td></tr>
 <tr><th>體力值</th><td>50</td><th>最低體重</th><td>20 g</td></tr>
 <tr><th>進化時間</th><td>48 小時</td><th>睡眠開始</th><td>21:00</td></tr>
@@ -486,5 +272,4 @@ header{position:sticky!important;top:0!important;z-index:999!important}.nav{over
 <tr><th>排便倒數</th><td>120 分</td><th>可治療次數</th><td>2</td></tr>
 <tr><th>遭遇時間組</th><td>2</td><th>遭遇對手組</th><td>5</td></tr>
 <tr><th>強度</th><td>130</td><th>攻擊點陣 ID</th><td>4</td></tr>
-</tbody></table>
-</article></div></section></main><script src="common.js?v=140"></script></body></html>
+</tbody></table></div></article></div></section></div></main><script>document.querySelectorAll('.node-main').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));dexSearch.oninput=()=>{const q=dexSearch.value.trim().toLowerCase();document.querySelectorAll('.tree-node').forEach(n=>n.classList.toggle('filtered',q&&!n.textContent.toLowerCase().includes(q)))};</script></body></html>
