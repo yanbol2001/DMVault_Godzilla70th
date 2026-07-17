@@ -42,3 +42,34 @@
 @media (max-width:440px){
   .route-area{grid-template-columns:1fr !important}
 }
+
+
+/* V1.3：所有進化卡片完整等高，空白特殊路線也顯示完整條件欄 */
+.route-area{
+  grid-auto-flow:row;
+  grid-auto-rows:auto;
+  align-items:start;
+  background:#fff;
+}
+.route-column{
+  display:flex;
+  flex-direction:column;
+  align-self:start;
+  height:auto !important;
+  min-height:401px;
+  background:#fff;
+}
+.route-head{flex:0 0 128px}
+.route-fields{flex:1}
+.route-fields .route-label,.route-fields .route-value{min-height:39px}
+@media (min-width:781px){
+  .route-area{
+    grid-template-columns:repeat(auto-fit,minmax(160px,160px)) !important;
+    justify-content:start;
+    align-content:start;
+  }
+  .route-column{min-height:401px}
+}
+@media (max-width:780px){
+  .route-column{min-height:401px}
+}
