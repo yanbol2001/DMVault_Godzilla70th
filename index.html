@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="zh-Hant"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes" name="viewport"/><title>DMVault｜Godzilla 70th｜進化條件 V0.5</title><style>
+<html lang="zh-Hant"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes" name="viewport"/><title>DMVault｜Godzilla 70th｜進化條件 V0.6</title><style>
 :root{--bg:#111315;--line:#3a4249;--text:#f2f3f4;--muted:#aeb7bf}*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif}body{min-height:100vh;overflow:hidden}header{height:64px;display:flex;align-items:center;gap:16px;padding:0 18px;background:#171a1d;border-bottom:1px solid var(--line);position:relative;z-index:5}.brand{font-size:20px;font-weight:800;white-space:nowrap}.brand span{color:var(--muted);font-weight:600}.badge{font-size:12px;border:1px solid #68514d;background:#2a201f;padding:4px 8px;border-radius:999px;color:#f4c1b8}.nav{display:flex;gap:8px}.nav a{color:#fff;text-decoration:none;border:1px solid #4a535b;background:#242a2f;border-radius:8px;padding:8px 11px;font-size:14px}.nav a.active{background:#4a3733;border-color:#85645e}.toolbar{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:nowrap}button{border:1px solid #4a535b;background:#242a2f;color:#fff;border-radius:8px;padding:8px 11px;font-size:14px;cursor:pointer}button:hover{background:#30373d}#zoomLabel{min-width:52px;text-align:center;color:var(--muted);font-size:13px}.notice{height:38px;display:flex;align-items:center;padding:0 18px;background:#22272b;color:#c6cdd2;border-bottom:1px solid var(--line);font-size:13px}#viewport{height:calc(100vh - 102px);overflow:auto;background:#d8d8d8;cursor:grab;touch-action:pan-x pan-y}#viewport.dragging{cursor:grabbing;user-select:none}#canvas{display:inline-block;min-width:max-content;transform-origin:top left;background:white;zoom:1}#evolution-sheet{margin:0;border-collapse:collapse;background:white;color:black}#evolution-sheet img{image-rendering:auto}@media(max-width:720px){.nav{width:100%;order:3}.nav a{flex:1;text-align:center}.toolbar{order:4}header{height:auto;min-height:64px;padding:10px 12px;align-items:flex-start;flex-wrap:wrap}.brand{font-size:17px}.toolbar{width:100%;margin-left:0;overflow-x:auto;padding-bottom:2px}.notice{height:auto;min-height:42px;padding:7px 12px}#viewport{height:calc(100vh - 126px)}button{padding:7px 10px}}
 
-#evolution-sheet td{position:relative}.formula-image{display:block;max-width:100%;max-height:120px;width:auto;height:auto;margin:2px auto;image-rendering:pixelated}#evolution-sheet td[data-cell]{min-width:1px}</style></head><body><header><div class="brand">DMVault <span>｜ Godzilla 70th</span></div><div class="badge">進化頁 V0.5 完整框架</div><nav class="nav"><a class="active" href="index.html">進化</a><a href="dex.html">圖鑑</a></nav><div class="toolbar"><button id="minus">－</button><span id="zoomLabel">100%</span><button id="plus">＋</button><button id="fit">適合寬度</button><button id="reset">100%</button></div></header><div class="notice">依原試算表完整還原進化資料、圖片、條件、分支及註記；本版同步建立結構化資料底稿。</div><main id="viewport"><div id="canvas"><table border="0" cellspacing="0" id="evolution-sheet">
+#evolution-sheet td{position:relative}.formula-image{display:block;max-width:100%;max-height:120px;width:auto;height:auto;margin:2px auto;image-rendering:pixelated}#evolution-sheet td[data-cell]{min-width:1px}</style></head><body><header><div class="brand">DMVault <span>｜ Godzilla 70th</span></div><div class="badge">進化頁 V0.6 完整框架</div><nav class="nav"><a class="active" href="index.html">進化</a><a href="dex.html">圖鑑</a><a href="stage.html">關卡</a></nav><div class="toolbar"><button id="minus">－</button><span id="zoomLabel">100%</span><button id="plus">＋</button><button id="fit">適合寬度</button><button id="reset">100%</button></div></header><div class="notice">依原試算表完整還原進化資料、圖片、條件、分支及註記；本版同步建立結構化資料底稿。</div><main id="viewport"><div id="canvas"><table border="0" cellspacing="0" id="evolution-sheet">
 <colgroup span="10" width="23"></colgroup>
 <colgroup span="16" width="45"></colgroup>
 <tr>
@@ -104,7 +104,7 @@
 <td align="left" colspan="9" data-cell="R7" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A8" data-sheets-formula="=Data2!R[-7]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ボタモン</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A8" data-sheets-formula="=Data2!R[-7]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">黑球獸</font></td>
 <td align="center" colspan="9" data-cell="B8" data-sheets-value='{ "1": 2, "2": "黑球獸"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">黑球獸</font></b></td>
 <td align="center" colspan="2" data-cell="K8" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -166,7 +166,7 @@
 <td align="left" colspan="9" data-cell="R8" data-sheets-value='{ "1": 2, "2": "醒著時，多少分鐘會減少飢餓、力量值的愛心或大便。"}' style="border-top: 2px solid #ff0000; border-right: 2px solid #ff0000" valign="middle"><font color="#000000" face="Noto Sans CJK SC">醒著時，多少分鐘會減少飢餓、力量值的愛心或大便。</font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B9" data-sheets-value='{ "1": 2, "2": "ボタモン"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ボタモン</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B9" data-sheets-value='{ "1": 2, "2": "黑球獸"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">黑球獸</font></b></td>
 <td align="center" data-cell="M9" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="N9" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" colspan="2" data-cell="O9" data-sheets-value='{ "1": 2, "2": "失誤"}' style="border-left: 2px solid #ff0000" valign="middle"><font color="#000000" face="Noto Sans CJK SC">失誤</font></td>
@@ -351,7 +351,7 @@
 <td align="center" data-cell="Z19" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A20" data-sheets-formula="=Data2!R[-18]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">コロモン</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A20" data-sheets-formula="=Data2!R[-18]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">滾球獸</font></td>
 <td align="center" colspan="9" data-cell="B20" data-sheets-value='{ "1": 2, "2": "滾球獸"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">滾球獸</font></b></td>
 <td align="center" colspan="2" data-cell="K20" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -575,7 +575,7 @@
 <td align="center" data-cell="Z20" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B21" data-sheets-value='{ "1": 2, "2": "コロモン"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">コロモン</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B21" data-sheets-value='{ "1": 2, "2": "滾球獸"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">滾球獸</font></b></td>
 <td align="center" data-cell="S21" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" bgcolor="#999999" data-cell="V21" data-sheets-value='{ "1": 2, "2": "←"}' rowspan="2" sdnum="1033;0;@" valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei" size="3">←</font></b></td>
 <td align="left" bgcolor="#999999" colspan="2" data-cell="W21" data-sheets-value='{ "1": 2, "2": "G細胞碎片"}' rowspan="2" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">G細胞碎片</font></b></td>
@@ -1784,7 +1784,7 @@
 <td align="center" data-cell="Z42" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A43" data-sheets-formula="=Data2!R[-40]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ベビーゴジラ</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A43" data-sheets-formula="=Data2!R[-40]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">幼期哥吉拉</font></td>
 <td align="center" colspan="9" data-cell="B43" data-sheets-value='{ "1": 2, "2": "幼期哥吉拉"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">幼期哥吉拉</font></b></td>
 <td align="center" colspan="2" data-cell="K43" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -2212,7 +2212,7 @@
 ,"-")' data-sheets-numberformat='{ "1": 2, "2": "@", "3": 1}' data-sheets-value='{ "1": 3, "3": 0}' rowspan="3" sdnum="1033;0;@" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-right: 1px solid #000000" valign="middle"><font color="#000000" face="Microsoft JhengHei"><img class="formula-image" src="assets/data2_a8_014.png"/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B44" data-sheets-value='{ "1": 2, "2": "ベビーゴジラ"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ベビーゴジラ</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B44" data-sheets-value='{ "1": 2, "2": "幼期哥吉拉"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">幼期哥吉拉</font></b></td>
 </tr>
 <tr>
 <td align="center" colspan="3" data-cell="B45" data-sheets-value='{ "1": 2, "2": "一般點陣"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Noto Sans CJK SC">一般點陣</font></td>
@@ -3616,7 +3616,7 @@
 <td align="center" data-cell="Z65" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A66" data-sheets-formula="=Data2!R[-62]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">アグモン</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A66" data-sheets-formula="=Data2!R[-62]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">亞古獸</font></td>
 <td align="center" colspan="9" data-cell="B66" data-sheets-value='{ "1": 2, "2": "亞古獸"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">亞古獸</font></b></td>
 <td align="center" colspan="2" data-cell="K66" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -4044,7 +4044,7 @@
 ,"-")' data-sheets-numberformat='{ "1": 2, "2": "@", "3": 1}' data-sheets-value='{ "1": 3, "3": 0}' rowspan="3" sdnum="1033;0;@" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="bottom"><font color="#000000" face="Microsoft JhengHei"><img class="formula-image" src="assets/data2_a10_018.png"/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B67" data-sheets-value='{ "1": 2, "2": "アグモン"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">アグモン</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B67" data-sheets-value='{ "1": 2, "2": "亞古獸"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">亞古獸</font></b></td>
 </tr>
 <tr>
 <td align="center" colspan="3" data-cell="B68" data-sheets-value='{ "1": 2, "2": "一般點陣"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Noto Sans CJK SC">一般點陣</font></td>
@@ -5157,7 +5157,7 @@
 <td align="center" data-cell="Z88" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A89" data-sheets-formula="=Data2!R[-84]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">モノドラモン</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A89" data-sheets-formula="=Data2!R[-84]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">單角龍獸</font></td>
 <td align="center" colspan="9" data-cell="B89" data-sheets-value='{ "1": 2, "2": "單角龍獸"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">單角龍獸</font></b></td>
 <td align="center" colspan="2" data-cell="K89" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -5483,7 +5483,7 @@
 <td align="center" data-cell="Z89" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B90" data-sheets-value='{ "1": 2, "2": "モノドラモン"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">モノドラモン</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B90" data-sheets-value='{ "1": 2, "2": "單角龍獸"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">單角龍獸</font></b></td>
 <td align="center" data-cell="W90" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="X90" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="Y90" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -5998,7 +5998,7 @@
 <td align="center" data-cell="Z100" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A101" data-sheets-formula="=Data2!R[-95]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">レドゴジラ</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A101" data-sheets-formula="=Data2!R[-95]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">力多爾哥吉拉</font></td>
 <td align="center" colspan="9" data-cell="B101" data-sheets-value='{ "1": 2, "2": "力多爾哥吉拉"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">力多爾哥吉拉</font></b></td>
 <td align="center" colspan="2" data-cell="K101" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -6220,7 +6220,7 @@
 <td align="center" data-cell="Z101" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B102" data-sheets-value='{ "1": 2, "2": "レドゴジラ"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">レドゴジラ</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B102" data-sheets-value='{ "1": 2, "2": "力多爾哥吉拉"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">力多爾哥吉拉</font></b></td>
 <td align="center" data-cell="U102" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="V102" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="W102" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -6635,7 +6635,7 @@
 <td align="center" data-cell="Z112" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A113" data-sheets-formula="=Data2!R[-106]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">グレイモン</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A113" data-sheets-formula="=Data2!R[-106]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">暴龍獸</font></td>
 <td align="center" colspan="9" data-cell="B113" data-sheets-value='{ "1": 2, "2": "暴龍獸"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">暴龍獸</font></b></td>
 <td align="center" colspan="4" data-cell="K113" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -6804,7 +6804,7 @@
 <td align="center" data-cell="Z113" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B114" data-sheets-value='{ "1": 2, "2": "グレイモン"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">グレイモン</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B114" data-sheets-value='{ "1": 2, "2": "暴龍獸"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">暴龍獸</font></b></td>
 <td align="center" data-cell="U114" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="V114" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="W114" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -7166,7 +7166,7 @@
 <td align="center" data-cell="Z124" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A125" data-sheets-formula="=Data2!R[-117]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ビオランテ</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A125" data-sheets-formula="=Data2!R[-117]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">碧奧蘭蒂</font></td>
 <td align="center" colspan="9" data-cell="B125" data-sheets-value='{ "1": 2, "2": "碧奧蘭蒂"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">碧奧蘭蒂</font></b></td>
 <td align="center" colspan="2" data-cell="K125" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -7339,7 +7339,7 @@
 <td align="center" data-cell="Z125" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B126" data-sheets-value='{ "1": 2, "2": "ビオランテ"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ビオランテ</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B126" data-sheets-value='{ "1": 2, "2": "碧奧蘭蒂"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">碧奧蘭蒂</font></b></td>
 <td align="center" data-cell="Q126" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="R126" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="S126" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -7713,7 +7713,7 @@
 <td align="center" data-cell="Z136" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A137" data-sheets-formula="=Data2!R[-128]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ゴジラザウルス</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A137" data-sheets-formula="=Data2!R[-128]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">哥吉拉龍</font></td>
 <td align="center" colspan="9" data-cell="B137" data-sheets-value='{ "1": 2, "2": "哥吉拉龍"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">哥吉拉龍</font></b></td>
 <td align="center" colspan="2" data-cell="K137" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -7988,7 +7988,7 @@
 <td align="center" data-cell="Z137" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B138" data-sheets-value='{ "1": 2, "2": "ゴジラザウルス"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ゴジラザウルス</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B138" data-sheets-value='{ "1": 2, "2": "哥吉拉龍"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">哥吉拉龍</font></b></td>
 <td align="center" data-cell="U138" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="V138" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="W138" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -8456,7 +8456,7 @@
 <td align="center" data-cell="Z148" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A149" data-sheets-formula="=Data2!R[-139]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">レアモン</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A149" data-sheets-formula="=Data2!R[-139]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">爛泥獸</font></td>
 <td align="center" colspan="9" data-cell="B149" data-sheets-value='{ "1": 2, "2": "爛泥獸"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">爛泥獸</font></b></td>
 <td align="center" colspan="4" data-cell="K149" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -8576,7 +8576,7 @@
 <td align="center" data-cell="Z149" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B150" data-sheets-value='{ "1": 2, "2": "レアモン"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">レアモン</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B150" data-sheets-value='{ "1": 2, "2": "爛泥獸"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">爛泥獸</font></b></td>
 <td align="center" data-cell="Q150" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="R150" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="S150" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -8897,7 +8897,7 @@
 <td align="center" data-cell="Z160" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A161" data-sheets-formula="=Data2!R[-150]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ガイガン</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A161" data-sheets-formula="=Data2!R[-150]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">蓋剛</font></td>
 <td align="center" colspan="9" data-cell="B161" data-sheets-value='{ "1": 2, "2": "蓋剛"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">蓋剛</font></b></td>
 <td align="center" colspan="2" data-cell="K161" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -9070,7 +9070,7 @@
 <td align="center" data-cell="Z161" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B162" data-sheets-value='{ "1": 2, "2": "ガイガン"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ガイガン</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B162" data-sheets-value='{ "1": 2, "2": "蓋剛"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">蓋剛</font></b></td>
 <td align="center" data-cell="Q162" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="R162" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="S162" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -9444,7 +9444,7 @@
 <td align="center" data-cell="Z172" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A173" data-sheets-formula="=Data2!R[-161]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">モスラ</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A173" data-sheets-formula="=Data2!R[-161]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">摩斯拉</font></td>
 <td align="center" colspan="9" data-cell="B173" data-sheets-value='{ "1": 2, "2": "摩斯拉"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">摩斯拉</font></b></td>
 <td align="center" colspan="2" data-cell="K173" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -9617,7 +9617,7 @@
 <td align="center" data-cell="Z173" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B174" data-sheets-value='{ "1": 2, "2": "モスラ"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">モスラ</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B174" data-sheets-value='{ "1": 2, "2": "摩斯拉"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">摩斯拉</font></b></td>
 <td align="center" data-cell="Q174" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="R174" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="S174" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -9991,7 +9991,7 @@
 <td align="center" data-cell="Z184" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A185" data-sheets-formula="=Data2!R[-172]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">キングギドラ</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A185" data-sheets-formula="=Data2!R[-172]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">王者基多拉</font></td>
 <td align="center" colspan="9" data-cell="B185" data-sheets-value='{ "1": 2, "2": "王者基多拉"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">王者基多拉</font></b></td>
 <td align="center" colspan="2" data-cell="K185" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -10164,7 +10164,7 @@
 <td align="center" data-cell="Z185" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B186" data-sheets-value='{ "1": 2, "2": "キングギドラ"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">キングギドラ</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B186" data-sheets-value='{ "1": 2, "2": "王者基多拉"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">王者基多拉</font></b></td>
 <td align="center" data-cell="Q186" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="R186" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="S186" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -10538,7 +10538,7 @@
 <td align="center" data-cell="Z196" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A197" data-sheets-formula="=Data2!R[-183]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ラドン</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A197" data-sheets-formula="=Data2!R[-183]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">拉頓</font></td>
 <td align="center" colspan="9" data-cell="B197" data-sheets-value='{ "1": 2, "2": "拉頓"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">拉頓</font></b></td>
 <td align="center" colspan="2" data-cell="K197" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -10711,7 +10711,7 @@
 <td align="center" data-cell="Z197" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B198" data-sheets-value='{ "1": 2, "2": "ラドン"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ラドン</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B198" data-sheets-value='{ "1": 2, "2": "拉頓"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">拉頓</font></b></td>
 <td align="center" data-cell="Q198" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="R198" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="S198" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -11085,7 +11085,7 @@
 <td align="center" data-cell="Z208" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A209" data-sheets-formula="=Data2!R[-194]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ゴジラジュニア</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A209" data-sheets-formula="=Data2!R[-194]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">哥吉拉二世</font></td>
 <td align="center" colspan="9" data-cell="B209" data-sheets-value='{ "1": 2, "2": "哥吉拉二世"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">哥吉拉二世</font></b></td>
 <td align="center" colspan="2" data-cell="K209" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -11258,7 +11258,7 @@
 <td align="center" data-cell="Z209" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B210" data-sheets-value='{ "1": 2, "2": "ゴジラジュニア"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ゴジラジュニア</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B210" data-sheets-value='{ "1": 2, "2": "哥吉拉二世"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">哥吉拉二世</font></b></td>
 <td align="center" data-cell="Q210" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="R210" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="S210" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -11632,7 +11632,7 @@
 <td align="center" data-cell="Z220" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A221" data-sheets-formula="=Data2!R[-205]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">メタルグレイモン：「G」侵食モード</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A221" data-sheets-formula="=Data2!R[-205]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">機械暴龍獸：G侵蝕模式</font></td>
 <td align="center" colspan="9" data-cell="B221" data-sheets-value='{ "1": 2, "2": "機械暴龍獸：G侵蝕模式"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">機械暴龍獸：G侵蝕模式</font></b></td>
 <td align="center" colspan="4" data-cell="K221" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -11752,7 +11752,7 @@
 <td align="center" data-cell="Z221" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B222" data-sheets-value='{ "1": 2, "2": "メタルグレイモン：「G」侵食モード"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">メタルグレイモン：「G」侵食モード</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B222" data-sheets-value='{ "1": 2, "2": "機械暴龍獸：G侵蝕模式"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">機械暴龍獸：G侵蝕模式</font></b></td>
 <td align="center" data-cell="Q222" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="R222" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="S222" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -12073,7 +12073,7 @@
 <td align="center" data-cell="Z232" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A233" data-sheets-formula="=Data2!R[-216]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">メタルグレイモン</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A233" data-sheets-formula="=Data2!R[-216]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">機械暴龍獸</font></td>
 <td align="center" colspan="9" data-cell="B233" data-sheets-value='{ "1": 2, "2": "機械暴龍獸"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">機械暴龍獸</font></b></td>
 <td align="center" colspan="4" data-cell="K233" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -12244,7 +12244,7 @@
 <td align="center" data-cell="Z233" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B234" data-sheets-value='{ "1": 2, "2": "メタルグレイモン"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">メタルグレイモン</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B234" data-sheets-value='{ "1": 2, "2": "機械暴龍獸"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">機械暴龍獸</font></b></td>
 <td align="center" data-cell="S234" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="T234" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="U234" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -12612,7 +12612,7 @@
 <td align="center" data-cell="Z244" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A245" data-sheets-formula="=Data2!R[-227]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">スペースゴジラ</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A245" data-sheets-formula="=Data2!R[-227]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">太空哥吉拉</font></td>
 <td align="center" colspan="9" data-cell="B245" data-sheets-value='{ "1": 2, "2": "太空哥吉拉"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">太空哥吉拉</font></b></td>
 <td align="center" colspan="2" data-cell="K245" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -12785,7 +12785,7 @@
 <td align="center" data-cell="Z245" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B246" data-sheets-value='{ "1": 2, "2": "スペースゴジラ"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">スペースゴジラ</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B246" data-sheets-value='{ "1": 2, "2": "太空哥吉拉"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">太空哥吉拉</font></b></td>
 <td align="center" data-cell="Q246" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="R246" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="S246" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -13159,7 +13159,7 @@
 <td align="center" data-cell="Z256" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A257" data-sheets-formula="=Data2!R[-238]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ゴジラ1954</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A257" data-sheets-formula="=Data2!R[-238]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">哥吉拉1954</font></td>
 <td align="center" colspan="9" data-cell="B257" data-sheets-value='{ "1": 2, "2": "哥吉拉1954"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">哥吉拉1954</font></b></td>
 <td align="center" colspan="2" data-cell="K257" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -13279,7 +13279,7 @@
 <td align="center" data-cell="Z257" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B258" data-sheets-value='{ "1": 2, "2": "ゴジラ1954"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ゴジラ1954</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B258" data-sheets-value='{ "1": 2, "2": "哥吉拉1954"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">哥吉拉1954</font></b></td>
 <td align="center" data-cell="Q258" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="R258" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="S258" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -13600,7 +13600,7 @@
 <td align="left" data-cell="Z268" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A269" data-sheets-formula="=Data2!R[-249]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">スカルグレイモン：「G」侵食モード</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A269" data-sheets-formula="=Data2!R[-249]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">喪屍暴龍獸：G侵蝕模式</font></td>
 <td align="center" colspan="9" data-cell="B269" data-sheets-value='{ "1": 2, "2": "喪屍暴龍獸：G侵蝕模式"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">喪屍暴龍獸：G侵蝕模式</font></b></td>
 <td align="center" colspan="4" data-cell="K269" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -13669,7 +13669,7 @@
 <td align="center" data-cell="Z269" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B270" data-sheets-value='{ "1": 2, "2": "スカルグレイモン：「G」侵食モード"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">スカルグレイモン：「G」侵食モード</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B270" data-sheets-value='{ "1": 2, "2": "喪屍暴龍獸：G侵蝕模式"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">喪屍暴龍獸：G侵蝕模式</font></b></td>
 <td align="center" data-cell="O270" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="P270" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="Q270" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -13940,7 +13940,7 @@
 <td align="center" colspan="4" data-cell="W280" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A281" data-sheets-formula="=Data2!R[-260]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ジラ</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A281" data-sheets-formula="=Data2!R[-260]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">吉拉</font></td>
 <td align="center" colspan="9" data-cell="B281" data-sheets-value='{ "1": 2, "2": "吉拉"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">吉拉</font></b></td>
 <td align="center" data-cell="K281" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L281" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -13960,7 +13960,7 @@
 <td align="center" data-cell="Z281" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B282" data-sheets-value='{ "1": 2, "2": "ジラ"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ジラ</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B282" data-sheets-value='{ "1": 2, "2": "吉拉"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">吉拉</font></b></td>
 <td align="center" data-cell="K282" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L282" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="M282" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -14190,7 +14190,7 @@
 <td align="center" colspan="4" data-cell="W292" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A293" data-sheets-formula="=Data2!R[-271]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">三式機竜改</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A293" data-sheets-formula="=Data2!R[-271]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">三式機龍改</font></td>
 <td align="center" colspan="9" data-cell="B293" data-sheets-value='{ "1": 2, "2": "三式機龍改"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">三式機龍改</font></b></td>
 <td align="center" colspan="4" data-cell="K293" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -14361,7 +14361,7 @@
 <td align="center" data-cell="Z293" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B294" data-sheets-value='{ "1": 2, "2": "三式機竜改"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">三式機竜改</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B294" data-sheets-value='{ "1": 2, "2": "三式機龍改"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">三式機龍改</font></b></td>
 <td align="center" data-cell="S294" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="T294" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="U294" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -14726,7 +14726,7 @@
 <td align="center" colspan="4" data-cell="W304" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A305" data-sheets-formula="=Data2!R[-282]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">メカキングギドラ</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A305" data-sheets-formula="=Data2!R[-282]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">機械王者基多拉</font></td>
 <td align="center" colspan="9" data-cell="B305" data-sheets-value='{ "1": 2, "2": "機械王者基多拉"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">機械王者基多拉</font></b></td>
 <td align="center" colspan="2" data-cell="K305" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -14797,7 +14797,7 @@
 <td align="center" data-cell="Z305" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B306" data-sheets-value='{ "1": 2, "2": "メカキングギドラ"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">メカキングギドラ</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B306" data-sheets-value='{ "1": 2, "2": "機械王者基多拉"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">機械王者基多拉</font></b></td>
 <td align="center" data-cell="M306" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="N306" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="O306" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -15074,7 +15074,7 @@
 <td align="center" colspan="4" data-cell="W316" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A317" data-sheets-formula="=Data2!R[-293]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ファイヤーラドン</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A317" data-sheets-formula="=Data2!R[-293]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">火之拉頓</font></td>
 <td align="center" colspan="9" data-cell="B317" data-sheets-value='{ "1": 2, "2": "火之拉頓"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">火之拉頓</font></b></td>
 <td align="center" data-cell="K317" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L317" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -15094,7 +15094,7 @@
 <td align="center" data-cell="Z317" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B318" data-sheets-value='{ "1": 2, "2": "ファイヤーラドン"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ファイヤーラドン</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B318" data-sheets-value='{ "1": 2, "2": "火之拉頓"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">火之拉頓</font></b></td>
 <td align="center" data-cell="K318" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L318" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="M318" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -15324,7 +15324,7 @@
 <td align="center" colspan="4" data-cell="W328" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A329" data-sheets-formula="=Data2!R[-304]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ゴジラ1994</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A329" data-sheets-formula="=Data2!R[-304]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">哥吉拉1994</font></td>
 <td align="center" colspan="9" data-cell="B329" data-sheets-value='{ "1": 2, "2": "哥吉拉1994"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">哥吉拉1994</font></b></td>
 <td align="center" colspan="2" data-cell="K329" data-sheets-formula='=switch(R[-1]C
 ,"","-"
@@ -15395,7 +15395,7 @@
 <td align="center" data-cell="Z329" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B330" data-sheets-value='{ "1": 2, "2": "ゴジラ1994"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ゴジラ1994</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B330" data-sheets-value='{ "1": 2, "2": "哥吉拉1994"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">哥吉拉1994</font></b></td>
 <td align="center" data-cell="M330" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="N330" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="O330" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -15672,7 +15672,7 @@
 <td align="center" colspan="4" data-cell="W340" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A341" data-sheets-formula="=Data2!R[-315]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ウォーグレイモン：「G」侵食モード</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A341" data-sheets-formula="=Data2!R[-315]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">戰鬥暴龍獸：G侵蝕模式</font></td>
 <td align="center" colspan="9" data-cell="B341" data-sheets-value='{ "1": 2, "2": "戰鬥暴龍獸：G侵蝕模式"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">戰鬥暴龍獸：G侵蝕模式</font></b></td>
 <td align="center" data-cell="K341" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L341" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -15692,7 +15692,7 @@
 <td align="center" data-cell="Z341" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B342" data-sheets-value='{ "1": 2, "2": "ウォーグレイモン：「G」侵食モード"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ウォーグレイモン：「G」侵食モード</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B342" data-sheets-value='{ "1": 2, "2": "戰鬥暴龍獸：G侵蝕模式"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">戰鬥暴龍獸：G侵蝕模式</font></b></td>
 <td align="center" data-cell="K342" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L342" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="M342" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -15925,7 +15925,7 @@
 <td align="center" data-cell="Z352" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A353" data-sheets-formula="=Data2!R[-326]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ウォーグレイモン</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A353" data-sheets-formula="=Data2!R[-326]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">戰鬥暴龍獸</font></td>
 <td align="center" colspan="9" data-cell="B353" data-sheets-value='{ "1": 2, "2": "戰鬥暴龍獸"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">戰鬥暴龍獸</font></b></td>
 <td align="center" data-cell="K353" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L353" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -15945,7 +15945,7 @@
 <td align="center" data-cell="Z353" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B354" data-sheets-value='{ "1": 2, "2": "ウォーグレイモン"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ウォーグレイモン</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B354" data-sheets-value='{ "1": 2, "2": "戰鬥暴龍獸"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">戰鬥暴龍獸</font></b></td>
 <td align="center" data-cell="K354" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L354" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="M354" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -16178,7 +16178,7 @@
 <td align="center" data-cell="Z364" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A365" data-sheets-formula="=Data2!R[-337]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">デストロイア</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A365" data-sheets-formula="=Data2!R[-337]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">戴斯特洛伊亞</font></td>
 <td align="center" colspan="9" data-cell="B365" data-sheets-value='{ "1": 2, "2": "戴斯特洛伊亞"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">戴斯特洛伊亞</font></b></td>
 <td align="center" data-cell="K365" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L365" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -16198,7 +16198,7 @@
 <td align="center" data-cell="Z365" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B366" data-sheets-value='{ "1": 2, "2": "デストロイア"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">デストロイア</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B366" data-sheets-value='{ "1": 2, "2": "戴斯特洛伊亞"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">戴斯特洛伊亞</font></b></td>
 <td align="center" data-cell="K366" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L366" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="M366" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -16431,7 +16431,7 @@
 <td align="center" data-cell="Z376" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A377" data-sheets-formula="=Data2!R[-348]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ゴジラ1999</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A377" data-sheets-formula="=Data2!R[-348]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">哥吉拉1999</font></td>
 <td align="center" colspan="9" data-cell="B377" data-sheets-value='{ "1": 2, "2": "哥吉拉1999"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">哥吉拉1999</font></b></td>
 <td align="center" data-cell="K377" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L377" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -16451,7 +16451,7 @@
 <td align="center" data-cell="Z377" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B378" data-sheets-value='{ "1": 2, "2": "ゴジラ1999"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">ゴジラ1999</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B378" data-sheets-value='{ "1": 2, "2": "哥吉拉1999"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="middle"><b><font color="#000000" face="Noto Sans CJK SC">哥吉拉1999</font></b></td>
 <td align="center" data-cell="K378" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L378" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="M378" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -16684,7 +16684,7 @@
 <td align="center" data-cell="Z388" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A389" data-sheets-formula="=Data2!R[-359]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ムゲンドラモン：3式〈改〉モード</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A389" data-sheets-formula="=Data2!R[-359]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">機械邪龍獸：3式(改)模式</font></td>
 <td align="center" colspan="9" data-cell="B389" data-sheets-value='{ "1": 2, "2": "機械邪龍獸：3式(改)模式"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">機械邪龍獸：3式(改)模式</font></b></td>
 <td align="center" data-cell="K389" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L389" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -16704,7 +16704,7 @@
 <td align="center" data-cell="Z389" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B390" data-sheets-value='{ "1": 2, "2": "ムゲンドラモン：3式〈改〉モード"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">ムゲンドラモン：3式〈改〉モード</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B390" data-sheets-value='{ "1": 2, "2": "機械邪龍獸：3式(改)模式"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">機械邪龍獸：3式(改)模式</font></b></td>
 <td align="center" data-cell="K390" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L390" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="M390" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -16937,7 +16937,7 @@
 <td align="center" data-cell="Z400" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A401" data-sheets-formula="=Data2!R[-370]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">メカゴジラ</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A401" data-sheets-formula="=Data2!R[-370]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">機械哥吉拉</font></td>
 <td align="center" colspan="9" data-cell="B401" data-sheets-value='{ "1": 2, "2": "機械哥吉拉"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">機械哥吉拉</font></b></td>
 <td align="center" data-cell="K401" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L401" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -16957,7 +16957,7 @@
 <td align="center" data-cell="Z401" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B402" data-sheets-value='{ "1": 2, "2": "メカゴジラ"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">メカゴジラ</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B402" data-sheets-value='{ "1": 2, "2": "機械哥吉拉"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">機械哥吉拉</font></b></td>
 <td align="center" data-cell="K402" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L402" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="M402" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -17190,7 +17190,7 @@
 <td align="center" data-cell="Z412" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A413" data-sheets-formula="=Data2!R[-381]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">バーニングゴジラ</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A413" data-sheets-formula="=Data2!R[-381]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">燃燒的哥吉拉</font></td>
 <td align="center" colspan="9" data-cell="B413" data-sheets-value='{ "1": 2, "2": "燃燒的哥吉拉"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">燃燒的哥吉拉</font></b></td>
 <td align="center" data-cell="K413" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L413" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -17210,7 +17210,7 @@
 <td align="center" data-cell="Z413" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B414" data-sheets-value='{ "1": 2, "2": "バーニングゴジラ"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">バーニングゴジラ</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B414" data-sheets-value='{ "1": 2, "2": "燃燒的哥吉拉"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">燃燒的哥吉拉</font></b></td>
 <td align="center" data-cell="K414" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L414" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="M414" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -17443,7 +17443,7 @@
 <td align="center" data-cell="Z424" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A425" data-sheets-formula="=Data2!R[-392]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ちびゴジラ</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A425" data-sheets-formula="=Data2!R[-392]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">小哥吉拉</font></td>
 <td align="center" colspan="9" data-cell="B425" data-sheets-value='{ "1": 2, "2": "小哥吉拉"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">小哥吉拉</font></b></td>
 <td align="center" data-cell="K425" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L425" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -17463,7 +17463,7 @@
 <td align="center" data-cell="Z425" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B426" data-sheets-value='{ "1": 2, "2": "ちびゴジラ"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">ちびゴジラ</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B426" data-sheets-value='{ "1": 2, "2": "小哥吉拉"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">小哥吉拉</font></b></td>
 <td align="center" data-cell="K426" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L426" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="M426" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -17696,7 +17696,7 @@
 <td align="center" data-cell="Z436" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" data-cell="A437" data-sheets-formula="=Data2!R[-403]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">ちびメカゴジラ</font></td>
+<td align="center" bgcolor="#B7B7B7" data-cell="A437" data-sheets-formula="=Data2!R[-403]C[3]" height="264" rowspan="11" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #cccccc" valign="middle"><font color="#000000" face="Microsoft JhengHei">小機械哥吉拉</font></td>
 <td align="center" colspan="9" data-cell="B437" data-sheets-value='{ "1": 2, "2": "小機械哥吉拉"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">小機械哥吉拉</font></b></td>
 <td align="center" data-cell="K437" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L437" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
@@ -17716,7 +17716,7 @@
 <td align="center" data-cell="Z437" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 </tr>
 <tr>
-<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B438" data-sheets-value='{ "1": 2, "2": "ちびメカゴジラ"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">ちびメカゴジラ</font></b></td>
+<td align="center" bgcolor="#B7B7B7" colspan="9" data-cell="B438" data-sheets-value='{ "1": 2, "2": "小機械哥吉拉"}' style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 2px solid #000000" valign="bottom"><b><font color="#000000" face="Noto Sans CJK SC">小機械哥吉拉</font></b></td>
 <td align="center" data-cell="K438" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="L438" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>
 <td align="center" data-cell="M438" data-sheets-value='{ "1": 2, "2": ""}' sdnum="1033;0;@" valign="middle"><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></td>

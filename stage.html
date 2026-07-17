@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes">
+<title>DMVault｜Godzilla 70th｜關卡 V0.6</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#17191d;color:#eee;font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}
+header{position:sticky;top:0;z-index:10;background:#111318;border-bottom:1px solid #343942;padding:10px 14px;box-shadow:0 3px 12px #0008}
+.brand{font-size:20px;font-weight:800} .brand span{font-weight:500;color:#bbb} .badge{display:inline-block;margin-top:5px;padding:3px 8px;border-radius:999px;background:#403b22;color:#ffe58a;font-size:12px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px} .nav a{color:#ddd;text-decoration:none;padding:6px 11px;border:1px solid #444;border-radius:7px;background:#242830} .nav a.active{background:#786b25;color:#fff;border-color:#b8a64c}
+.toolbar{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:9px} button{border:1px solid #555;background:#2a2f37;color:#fff;border-radius:6px;padding:6px 10px;cursor:pointer} #zoomLabel{min-width:48px;text-align:center}
+.notice{padding:9px 14px;background:#25220f;color:#f2dfa0;border-bottom:1px solid #514b25;font-size:13px}
+#viewport{overflow:auto;width:100%;height:calc(100vh - 155px);background:#d8d8d8;cursor:grab} #viewport.dragging{cursor:grabbing}
+#canvas{transform-origin:top left;width:max-content;padding:18px} #stage-sheet{background:white;color:#000;border-collapse:collapse;box-shadow:0 3px 14px #0005}
+#stage-sheet td{white-space:nowrap} #stage-sheet img{image-rendering:pixelated;max-width:none}
+@media(max-width:700px){header{padding:8px} .brand{font-size:17px} #viewport{height:calc(100vh - 166px)} #canvas{padding:8px}}
+</style></head><body>
+<header><div class="brand">DMVault <span>｜ Godzilla 70th</span></div><div class="badge">關卡頁 V0.6 原表框架</div>
+<nav class="nav"><a href="index.html">進化</a><a href="dex.html">圖鑑</a><a class="active" href="stage.html">關卡</a></nav>
+<div class="toolbar"><button id="minus">－</button><span id="zoomLabel">100%</span><button id="plus">＋</button><button id="fit">適合寬度</button><button id="reset">100%</button></div></header>
+<div class="notice">依原試算表「關卡」工作表搬移；保留關卡內容、圖片、順序與表格配置。</div>
+<main id="viewport"><div id="canvas"><table id="stage-sheet" align="left" border="0" cellspacing="0">
+<colgroup span="2" width="75"></colgroup>
+<colgroup span="11" width="56"></colgroup>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "回合數"}' height="30" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">回合數</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "敵方資料"}' valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">敵方資料</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第一關"}' style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第一關</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第二關"}' style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第二關</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第三關"}' style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第三關</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第四關"}' style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第四關</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第五關"}' style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第五關</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第六關"}' style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第六關</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第七關"}' style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第七關</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第八關"}' style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第八關</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第九關"}' valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第九關</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第F關"}' style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第F關</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "版本"}' valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">版本</font></b></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第一輪"}' height="120" rowspan="3" style="border-top: 1px solid #000000; border-bottom: 1px solid #ffffff; border-left: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第一輪</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "敵人"}' style="border-top: 1px solid #000000" valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">敵人</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-top: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": "哥吉拉 70周年"}' rowspan="16" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><b><font color="#9900FF" face="Noto Sans CJK SC" size="6">哥吉拉 70周年</font></b></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "屬性"}' valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">屬性</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "強度"}' style="border-bottom: 1px solid #ffffff" valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">強度</font></td>
+<td align="center" sdnum="1033;" sdval="10" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">10</font></td>
+<td align="center" sdnum="1033;" sdval="14" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">14</font></td>
+<td align="center" sdnum="1033;" sdval="23" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">23</font></td>
+<td align="center" sdnum="1033;" sdval="34" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">34</font></td>
+<td align="center" sdnum="1033;" sdval="40" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">40</font></td>
+<td align="center" sdnum="1033;" sdval="38" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">38</font></td>
+<td align="center" sdnum="1033;" sdval="54" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">54</font></td>
+<td align="center" sdnum="1033;" sdval="58" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">58</font></td>
+<td align="center" sdnum="1033;" sdval="80" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">80</font></td>
+<td align="center" sdnum="1033;" sdval="96" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">96</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第二輪"}' height="120" rowspan="3" style="border-bottom: 1px solid #ffffff; border-left: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第二輪</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "敵人"}' valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">敵人</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "屬性"}' valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">屬性</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "強度"}' style="border-bottom: 1px solid #ffffff" valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">強度</font></td>
+<td align="center" sdnum="1033;" sdval="14" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">14</font></td>
+<td align="center" sdnum="1033;" sdval="18" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">18</font></td>
+<td align="center" sdnum="1033;" sdval="32" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">32</font></td>
+<td align="center" sdnum="1033;" sdval="40" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">40</font></td>
+<td align="center" sdnum="1033;" sdval="48" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">48</font></td>
+<td align="center" sdnum="1033;" sdval="54" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">54</font></td>
+<td align="center" sdnum="1033;" sdval="76" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">76</font></td>
+<td align="center" sdnum="1033;" sdval="88" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">88</font></td>
+<td align="center" sdnum="1033;" sdval="110" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">110</font></td>
+<td align="center" sdnum="1033;" sdval="124" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">124</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第三輪"}' height="120" rowspan="3" style="border-bottom: 1px solid #ffffff; border-left: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第三輪</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "敵人"}' valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">敵人</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "屬性"}' valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">屬性</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "強度"}' style="border-bottom: 1px solid #ffffff" valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">強度</font></td>
+<td align="center" sdnum="1033;" sdval="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">17</font></td>
+<td align="center" sdnum="1033;" sdval="22" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">22</font></td>
+<td align="center" sdnum="1033;" sdval="42" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">42</font></td>
+<td align="center" sdnum="1033;" sdval="54" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">54</font></td>
+<td align="center" sdnum="1033;" sdval="72" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">72</font></td>
+<td align="center" sdnum="1033;" sdval="88" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">88</font></td>
+<td align="center" sdnum="1033;" sdval="92" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">92</font></td>
+<td align="center" sdnum="1033;" sdval="110" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">110</font></td>
+<td align="center" sdnum="1033;" sdval="140" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">140</font></td>
+<td align="center" sdnum="1033;" sdval="148" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">148</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第四輪"}' height="120" rowspan="3" style="border-bottom: 1px solid #ffffff; border-left: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第四輪</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "敵人"}' valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">敵人</font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "屬性"}' valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">屬性</font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "強度"}' style="border-bottom: 1px solid #ffffff" valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">強度</font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" sdnum="1033;" sdval="60" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">60</font></td>
+<td align="center" sdnum="1033;" sdval="88" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">88</font></td>
+<td align="center" sdnum="1033;" sdval="110" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">110</font></td>
+<td align="center" sdnum="1033;" sdval="116" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">116</font></td>
+<td align="center" sdnum="1033;" sdval="140" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">140</font></td>
+<td align="center" sdnum="1033;" sdval="160" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">160</font></td>
+<td align="center" sdnum="1033;" sdval="174" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">174</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "第五輪"}' height="120" rowspan="3" style="border-bottom: 1px solid #ffffff; border-left: 1px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">第五輪</font></b></td>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "敵人"}' valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">敵人</font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">0</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "屬性"}' valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">屬性</font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+<td align="center" sdnum="1033;" sdval="0" style="border-right: 1px solid #000000" valign="middle"><font color="#000000">#NAME?</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": "強度"}' style="border-bottom: 1px solid #ffffff" valign="middle"><font color="#FFFFFF" face="Noto Sans CJK SC">強度</font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000"><br/></font></td>
+<td align="center" sdnum="1033;" sdval="140" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">140</font></td>
+<td align="center" sdnum="1033;" sdval="160" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">160</font></td>
+<td align="center" sdnum="1033;" sdval="188" style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">188</font></td>
+<td align="center" sdnum="1033;" sdval="220" style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000">220</font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" colspan="2" data-sheets-value='{ "1": 2, "2": "解鎖背景"}' height="60" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="3">解鎖背景</font></b></td>
+<td align="center" colspan="2" data-sheets-value='{ "1": 2, "2": ""}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000" face='"Microsoft JhengHei"' size="3"><br/><img height="60" hspace="27" src="%C3%A6%C2%80%C2%AA%C3%A7%C2%8D%C2%B8%C3%A5%C2%B0%C2%8D%C3%A6%C2%89%C2%93%C3%A6%C2%A9%C2%9FCOLOR%20%C3%A5%C2%93%C2%A5%C3%A5%C2%90%C2%89%C3%A6%C2%8B%C2%89%2070th%20Edition%C3%A4%C2%B8%C2%AD%C3%A6%C2%96%C2%87%C3%A6%C2%94%C2%BB%C3%A7%C2%95%C2%A5%20%C3%A7%C2%B4%C2%AB%C3%A7%C2%A1%C2%AF%C3%A7%C2%9A%C2%84%C3%A5%C2%89%C2%AF%C3%A6%C2%9C%C2%AC_html_d315a100.png" vspace="0" width="60"/>
+</font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000" size="3"><br/></font></td>
+<td align="center" colspan="2" data-sheets-value='{ "1": 2, "2": ""}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000" size="3"><br/><img height="60" hspace="27" src="%C3%A6%C2%80%C2%AA%C3%A7%C2%8D%C2%B8%C3%A5%C2%B0%C2%8D%C3%A6%C2%89%C2%93%C3%A6%C2%A9%C2%9FCOLOR%20%C3%A5%C2%93%C2%A5%C3%A5%C2%90%C2%89%C3%A6%C2%8B%C2%89%2070th%20Edition%C3%A4%C2%B8%C2%AD%C3%A6%C2%96%C2%87%C3%A6%C2%94%C2%BB%C3%A7%C2%95%C2%A5%20%C3%A7%C2%B4%C2%AB%C3%A7%C2%A1%C2%AF%C3%A7%C2%9A%C2%84%C3%A5%C2%89%C2%AF%C3%A6%C2%9C%C2%AC_html_73aa8780.png" vspace="0" width="60"/>
+</font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000" size="3"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": "解鎖\n進化"}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000" face="Noto Sans CJK SC" size="3">解鎖<br/>進化</font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000" face='"Microsoft JhengHei"' size="3"><br/></font></td>
+<td align="center" bgcolor="#B7B7B7" data-sheets-value='{ "1": 2, "2": ""}' style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000" face='"Microsoft JhengHei"' size="3"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><font color="#000000" size="3"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="21" valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+</tr>
+</table></div></main>
+<script>
+const vp=document.getElementById('viewport'), cv=document.getElementById('canvas'), label=document.getElementById('zoomLabel'); let z=1;
+function setZoom(n){z=Math.max(.25,Math.min(3,n));cv.style.transform=`scale(${z})`;label.textContent=Math.round(z*100)+'%';cv.style.marginRight=(cv.scrollWidth*(z-1))+'px';cv.style.marginBottom=(cv.scrollHeight*(z-1))+'px'}
+document.getElementById('plus').onclick=()=>setZoom(z+.1);document.getElementById('minus').onclick=()=>setZoom(z-.1);document.getElementById('reset').onclick=()=>setZoom(1);
+document.getElementById('fit').onclick=()=>{const t=document.getElementById('stage-sheet');setZoom(Math.min(1,(vp.clientWidth-20)/t.scrollWidth))};
+let drag=false,sx=0,sy=0,sl=0,st=0;vp.addEventListener('pointerdown',e=>{if(e.target.closest('button,a'))return;drag=true;vp.classList.add('dragging');sx=e.clientX;sy=e.clientY;sl=vp.scrollLeft;st=vp.scrollTop;vp.setPointerCapture(e.pointerId)});vp.addEventListener('pointermove',e=>{if(!drag)return;vp.scrollLeft=sl-(e.clientX-sx);vp.scrollTop=st-(e.clientY-sy)});vp.addEventListener('pointerup',()=>{drag=false;vp.classList.remove('dragging')});
+</script></body></html>

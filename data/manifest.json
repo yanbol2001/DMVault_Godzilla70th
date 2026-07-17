@@ -1,6 +1,6 @@
 {
   "project": "DMVault_Godzilla70th",
-  "version": "0.5",
+  "version": "V0.6",
   "source_sheet": "進化條件",
   "html_rows": 447,
   "html_cells": 7967,
@@ -29,5 +29,8 @@
     "究極體": 10
   },
   "dex_missing_images": [],
-  "dex_language": "繁體中文（正式名稱保留日文欄位）"
+  "dex_language": "繁體中文（正式名稱保留日文欄位）",
+  "pages": [
+    "stage.html"
+  ]
 }
