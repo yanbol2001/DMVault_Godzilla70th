@@ -1,1 +1,3 @@
-DMVault Godzilla70th V1.0
+DMVault Godzilla 70th V1.1
+- 全站共用固定位置導覽列
+- 關卡頁補回怪獸圖片
