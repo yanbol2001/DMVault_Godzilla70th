@@ -73,3 +73,11 @@
 @media (max-width:780px){
   .route-column{min-height:401px}
 }
+
+/* V1.3.1：第二列進化目標併入右側卡片流；無一般條件的 G侵蝕／特殊模式只顯示卡頭 */
+.route-area{grid-auto-flow:row;align-items:start;align-content:start}
+.route-column.special-route{min-height:128px !important;height:128px !important;align-self:start;background:#fff}
+.route-column.special-route .route-head{height:128px;flex-basis:128px;border-bottom:1px solid #bbb}
+@media (min-width:781px){
+  .route-area{grid-template-columns:repeat(auto-fill,160px) !important}
+}
