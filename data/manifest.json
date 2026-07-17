@@ -1,0 +1,22 @@
+{
+  "project": "DMVault_Godzilla70th",
+  "version": "0.4",
+  "source_sheet": "進化條件",
+  "html_rows": 447,
+  "html_cells": 7967,
+  "nonempty_cells": 2450,
+  "formula_cells": 616,
+  "image_references": 127,
+  "unique_image_references": 73,
+  "missing_images": [],
+  "formula_error_tokens": {
+    "#NAME?": 0,
+    "#REF!": 0,
+    "#VALUE!": 0,
+    "#N/A": 0
+  },
+  "structured_files": [
+    "data/evolution-cells.json",
+    "data/monster-index.json"
+  ]
+}
