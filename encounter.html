@@ -1,0 +1,855 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"><title>DMVault｜Godzilla 70th｜隨機遭遇事件 V0.9</title><style type="text/css">
+		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Arial"; font-size:x-small }
+		a.comment-indicator:hover + comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em;  } 
+		a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em;  } 
+		comment { display:none;  } 
+	</style><style>
+:root{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;color:#191919;background:#eef1f3}*{box-sizing:border-box}body{margin:0;background:#eef1f3}header.dm{position:sticky;top:0;z-index:100;background:#171b1f;color:#fff;padding:10px 16px;box-shadow:0 2px 8px #0005}.brand{font-weight:800;font-size:20px}.brand span{font-weight:500;color:#c9d1d9}.badge{font-size:13px;color:#aeb8c2;margin-top:2px}.nav{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.nav a{color:#e8edf2;text-decoration:none;padding:6px 11px;border:1px solid #59636d;border-radius:7px;background:#2b3239}.nav a.active{background:#e8edf2;color:#171b1f;font-weight:700}.notice{padding:9px 16px;background:#fff3cd;border-bottom:1px solid #e0c46c;font-size:14px}.sheet-viewport{overflow:auto;padding:16px;min-height:calc(100vh - 125px)}.sheet-canvas{display:inline-block;background:#fff;box-shadow:0 2px 14px #0002;padding:10px;transform-origin:top left}.sheet-canvas table{margin:0!important}@media(max-width:700px){.sheet-viewport{padding:8px}.sheet-canvas{padding:4px}.brand{font-size:17px}}
+</style></head><body><header class="dm"><div class="brand">DMVault <span>｜ Godzilla 70th</span></div><div class="badge">隨機遭遇事件 V0.9 原始資料框架</div><nav class="nav"><a href="index.html">進化</a><a href="dex.html">圖鑑</a><a href="stage.html">關卡</a><a href="background.html">背景</a><a href="gcell.html">G細胞</a><a class="active" href="encounter.html">隨機遭遇</a></nav></header><div class="notice">依原始 Excel「隨機遭遇事件」工作表搬移事件時段、選項、結果與怪獸圖片。</div><main class="sheet-viewport"><div class="sheet-canvas">
+<table align="left" cellspacing="0" border="0">
+	<colgroup span="23" width="24"></colgroup>
+	<tr>
+		<td colspan=24 rowspan=2 height="50" align="center" valign=middle bgcolor="#000000" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;隨機遭遇事件 系統概要&quot;}"><b><font face="Noto Sans CJK SC" size=4 color="#FFFFFF">隨機遭遇事件 系統概要</font></b></td>
+		</tr>
+	<tr>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;白天時可能會響起哥吉拉的主題曲，這代表隨機遭遇事件發生。&quot;}"><font face="Noto Sans CJK SC" color="#000000">白天時可能會響起哥吉拉的主題曲，這代表隨機遭遇事件發生。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;此時螢幕會顯示怪獸攻擊，你可以按A或B接受挑戰，或按C拒絕。&quot;}"><font face="Noto Sans CJK SC" color="#000000">此時螢幕會顯示怪獸攻擊，你可以按A或B接受挑戰，或按C拒絕。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;如果接受挑戰，將會進行一場與一般任務戰鬥相同的戰鬥。&quot;}"><font face="Noto Sans CJK SC" color="#000000">如果接受挑戰，將會進行一場與一般任務戰鬥相同的戰鬥。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;若獲勝，你的G細胞將會大幅增加。&quot;}"><font face="Noto Sans CJK SC" color="#000000">若獲勝，你的G細胞將會大幅增加。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="center" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;雖然稱為隨機遭遇事件，但其實都是完全預先設定好的。&quot;}"><font face="Noto Sans CJK SC" color="#000000">雖然稱為隨機遭遇事件，但其實都是完全預先設定好的。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;每隻怪獸都被分配了[時間組別]和[對手組別]。&quot;}"><font face="Noto Sans CJK SC" color="#000000">每隻怪獸都被分配了[時間組別]和[對手組別]。</font></td>
+		</tr>
+	<tr>
+		<td height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-left: 1px solid #000000" height="25" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;圖&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">圖</font></b></td>
+		<td style="border-top: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;時間組別&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">時間組別</font></b></td>
+		<td style="border-top: 1px solid #000000; border-right: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;對手組別&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">對手組別</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;圖&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">圖</font></b></td>
+		<td style="border-top: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;時間組別&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">時間組別</font></b></td>
+		<td style="border-top: 1px solid #000000; border-right: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;對手組別&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">對手組別</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-left: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;圖&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">圖</font></b></td>
+		<td style="border-top: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;時間組別&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">時間組別</font></b></td>
+		<td style="border-top: 1px solid #000000; border-right: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;對手組別&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">對手組別</font></b></td>
+		</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="0" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">0</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="0" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">0</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="4" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">4</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="2" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">2</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="5" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">5</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="6" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">6</font></td>
+		</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="1" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">1</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="0" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">0</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="4" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">4</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="3" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">3</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="7" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">7</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="7" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">7</font></td>
+		</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="0" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">0</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="0" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">0</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="7" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">7</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="5" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">5</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="6" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">6</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="5" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">5</font></td>
+		</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="2" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">2</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="1" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">1</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="6" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">6</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="4" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">4</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="5" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">5</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="5" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">5</font></td>
+		</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="4" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">4</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="2" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">2</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="4" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">4</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="3" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">3</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="6" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">6</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="6" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">6</font></td>
+		</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="3" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">3</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="1" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">1</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="5" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">5</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="4" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">4</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="6" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">6</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="7" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">7</font></td>
+		</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="4" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">4</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="2" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">2</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="7" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">7</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="5" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">5</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="7" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">7</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="5" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">5</font></td>
+		</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="2" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">2</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="1" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">1</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="4" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">4</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="3" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">3</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="5" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">5</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="6" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">6</font></td>
+		</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="4" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">4</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="2" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">2</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="7" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">7</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="4" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">4</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="2" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">2</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="5" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">5</font></td>
+		</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="2" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">2</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="1" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">1</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td colspan=3 align="center" valign=middle sdval="5" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">5</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="4" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">4</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-bottom: 1px solid #000000" colspan=3 align="center" valign=middle sdval="2" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">2</font></td>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="5" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">5</font></td>
+		</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000" height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-bottom: 1px solid #000000" colspan=3 align="center" valign=middle sdval="3" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">3</font></td>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="1" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">1</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td style="border-bottom: 1px solid #000000" colspan=3 align="center" valign=middle sdval="3" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">3</font></td>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="3" sdnum="1033;"><font face="Microsoft JhengHei" color="#000000">3</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;遭遇時間組別：&quot;}"><b><font face="Noto Sans CJK SC" color="#0000FF">遭遇時間組別：</font></b></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;你可以透過查詢自己目前養的怪獸時間組別，來精確知道遭遇事件會在什麼時間發生。&quot;}"><font face="Noto Sans CJK SC" color="#000000">你可以透過查詢自己目前養的怪獸時間組別，來精確知道遭遇事件會在什麼時間發生。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;如果將遊戲時鐘調整到某個指定時間的前一分鐘，當時鐘自動跳至該分鐘時，遭遇就會發生。&quot;}"><font face="Noto Sans CJK SC" color="#000000">如果將遊戲時鐘調整到某個指定時間的前一分鐘，當時鐘自動跳至該分鐘時，遭遇就會發生。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;組別&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">組別</font></b></td>
+		<td style="border-top: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;第一次&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">第一次</font></b></td>
+		<td style="border-top: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;第二次&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">第二次</font></b></td>
+		<td style="border-top: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;第三次&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">第三次</font></b></td>
+		<td style="border-top: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;第四次&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">第四次</font></b></td>
+		<td style="border-top: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;第五次&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">第五次</font></b></td>
+		<td style="border-top: 1px solid #000000; border-right: 1px solid #000000" colspan=3 align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;第六次&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">第六次</font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="0" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">0</font></b></td>
+		<td colspan=3 align="center" valign=middle sdval="0.471527777777778" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">AM 11:19</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.55" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 1:12</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.669444444444444" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 4:04</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.76875" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 6:27</font></td>
+		<td colspan=3 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}"><font face="Microsoft JhengHei" color="#000000">-</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}"><font face="Microsoft JhengHei" color="#000000">-</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="1" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">1</font></b></td>
+		<td colspan=3 align="center" valign=middle sdval="0.446527777777778" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">AM 10:43</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.602083333333333" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 2:27</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.704861111111111" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 4:55</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.794444444444444" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 7:04</font></td>
+		<td colspan=3 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}"><font face="Microsoft JhengHei" color="#000000">-</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}"><font face="Microsoft JhengHei" color="#000000">-</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="2" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">2</font></b></td>
+		<td colspan=3 align="center" valign=middle sdval="0.490972222222222" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">AM 11:47</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.554861111111111" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 1:19</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.650694444444445" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 3:37</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.726388888888889" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 5:26</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.827083333333333" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 7:51</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}"><font face="Microsoft JhengHei" color="#000000">-</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="3" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">3</font></b></td>
+		<td colspan=3 align="center" valign=middle sdval="0.407638888888889" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">AM 9:47</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.506944444444444" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 12:10</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.613888888888889" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 2:44</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.752083333333333" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 6:03</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.847222222222222" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 8:20</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}"><font face="Microsoft JhengHei" color="#000000">-</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="4" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">4</font></b></td>
+		<td colspan=3 align="center" valign=middle sdval="0.471527777777778" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">AM 11:19</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.588194444444445" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 2:07</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.686805555555556" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 4:29</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.75625" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 6:09</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.866666666666667" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 8:48</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;-&quot;}"><font face="Microsoft JhengHei" color="#000000">-</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="5" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">5</font></b></td>
+		<td colspan=3 align="center" valign=middle sdval="0.425" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">AM 10:12</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.55" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 1:12</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.63125" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 3:09</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.7125" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 5:06</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.794444444444444" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 7:04</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="0.883333333333333" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 9:12</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="6" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">6</font></b></td>
+		<td colspan=3 align="center" valign=middle sdval="0.407638888888889" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">AM 9:47</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.506944444444444" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 12:10</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.577777777777778" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 1:52</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.669444444444444" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 4:04</font></td>
+		<td colspan=3 align="center" valign=middle sdval="0.740277777777778" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 5:46</font></td>
+		<td style="border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="0.847222222222222" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 8:20</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="7" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">7</font></b></td>
+		<td style="border-bottom: 1px solid #000000" colspan=3 align="center" valign=middle sdval="0.446527777777778" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">AM 10:43</font></td>
+		<td style="border-bottom: 1px solid #000000" colspan=3 align="center" valign=middle sdval="0.0229166666666667" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">AM 12:33</font></td>
+		<td style="border-bottom: 1px solid #000000" colspan=3 align="center" valign=middle sdval="0.602083333333333" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 2:27</font></td>
+		<td style="border-bottom: 1px solid #000000" colspan=3 align="center" valign=middle sdval="0.704861111111111" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 4:55</font></td>
+		<td style="border-bottom: 1px solid #000000" colspan=3 align="center" valign=middle sdval="0.76875" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 6:27</font></td>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" colspan=3 align="center" valign=middle sdval="0.866666666666667" sdnum="1033;0;AM/PM H:MM" data-sheets-value="{ &quot;1&quot;: 3, &quot;3&quot;: 0}" data-sheets-numberformat="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;AM\/PM H:MM&quot;, &quot;3&quot;: 1}"><font face="Microsoft JhengHei" color="#000000">PM 8:48</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;遭遇對手組別：&quot;}"><b><font face="Noto Sans CJK SC" color="#0000FF">遭遇對手組別：</font></b></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;列出了可能遭遇的對手，順序依出場時間排列。&quot;}"><font face="Noto Sans CJK SC" color="#000000">列出了可能遭遇的對手，順序依出場時間排列。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;每次打到一場遭遇戰，或者去訓練一次，下一個敵人就會換成清單裡的下一個。&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">每次打到一場遭遇戰，或者去訓練一次，下一個敵人就會換成清單裡的下一個。</font></b></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;如果下一個對手顯示為[無]，那麼在指定時間就不會發生遭遇。&quot;}"><font face="Noto Sans CJK SC" color="#000000">如果下一個對手顯示為[無]，那麼在指定時間就不會發生遭遇。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;當清單從A跑到最後一個對手P後，會重新從該清單的最前端開始循環。&quot;}"><font face="Noto Sans CJK SC" color="#000000">當清單從A跑到最後一個對手P後，會重新從該清單的最前端開始循環。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-left: 1px solid #000000" colspan=3 height="25" align="left" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;組別 \\ 對手&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">組別 \ 對手</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;A&quot;}"><b><font face="Microsoft JhengHei" color="#000000">A</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;B&quot;}"><b><font face="Microsoft JhengHei" color="#000000">B</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;C&quot;}"><b><font face="Microsoft JhengHei" color="#000000">C</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;D&quot;}"><b><font face="Microsoft JhengHei" color="#000000">D</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;E&quot;}"><b><font face="Microsoft JhengHei" color="#000000">E</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;F&quot;}"><b><font face="Microsoft JhengHei" color="#000000">F</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;G&quot;}"><b><font face="Microsoft JhengHei" color="#000000">G</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;H&quot;}"><b><font face="Microsoft JhengHei" color="#000000">H</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;I&quot;}"><b><font face="Microsoft JhengHei" color="#000000">I</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;J&quot;}"><b><font face="Microsoft JhengHei" color="#000000">J</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;K&quot;}"><b><font face="Microsoft JhengHei" color="#000000">K</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;L&quot;}"><b><font face="Microsoft JhengHei" color="#000000">L</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;M&quot;}"><b><font face="Microsoft JhengHei" color="#000000">M</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;N&quot;}"><b><font face="Microsoft JhengHei" color="#000000">N</font></b></td>
+		<td style="border-top: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;O&quot;}"><b><font face="Microsoft JhengHei" color="#000000">O</font></b></td>
+		<td style="border-top: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle bgcolor="#B7B7B7" data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;P&quot;}"><b><font face="Microsoft JhengHei" color="#000000">P</font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="0" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">0</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_770af18b.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_ef843932.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_c4a3cdaf.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_64999188.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_da042edd.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td style="border-right: 1px solid #000000" align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="1" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">1</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_770af18b.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_ef843932.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_57036a3b.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td style="border-right: 1px solid #000000" colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_ff13ff10.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="2" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">2</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_91f760fa.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_64999188.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_ef843932.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_2a853326.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_38fd7a41.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td style="border-right: 1px solid #000000" colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_39d8586a.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="3" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">3</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_a82be5f3.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_2f7f9e9a.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_f91b24d0.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="4" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">4</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_723e7f2f.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_f303bda0.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_ef843932.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td style="border-right: 1px solid #000000" align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="5" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">5</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_38fd7a41.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_31dd9029.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_40b43b3.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="6" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">6</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_ef843932.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_2a853326.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_41a6dd83.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td style="border-right: 1px solid #000000" colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_52390eb7.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000" colspan=3 height="25" align="center" valign=middle bgcolor="#B7B7B7" sdval="7" sdnum="1033;"><b><font face="Microsoft JhengHei" color="#000000">7</font></b></td>
+		<td style="border-bottom: 1px solid #000000" colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_2a853326.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td style="border-bottom: 1px solid #000000" align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td style="border-bottom: 1px solid #000000" colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_41a6dd83.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td style="border-bottom: 1px solid #000000" align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td style="border-bottom: 1px solid #000000" colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_58396f6.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td style="border-bottom: 1px solid #000000" align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td style="border-bottom: 1px solid #000000" colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_2a853326.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td style="border-bottom: 1px solid #000000" align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;無&quot;}"><b><font face="Noto Sans CJK SC" color="#000000">無</font></b></td>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" colspan=2 align="center" valign=middle data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br><img src="assets/encounter_html_9b24aee4.png" width=25 height=25 hspace=12 vspace=0>
+		</font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#FF0000"><br></font></b></td>
+	</tr>
+	<tr>
+		<td height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><b><font face="Microsoft JhengHei" color="#000000"><br></font></b></td>
+	</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;需要注意的是：&quot;}"><b><font face="Noto Sans CJK SC" color="#FF0000">需要注意的是：</font></b></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;使用[冷凍模式]或[備份]，會使對手清單回到初始狀態。&quot;}"><font face="Noto Sans CJK SC" color="#000000">使用[冷凍模式]或[備份]，會使對手清單回到初始狀態。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;關閉電源後再開機，也會讓對手清單重新開始。&quot;}"><font face="Noto Sans CJK SC" color="#000000">關閉電源後再開機，也會讓對手清單重新開始。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;查法很簡單：&quot;}"><b><font face="Noto Sans CJK SC" color="#0000FF">查法很簡單：</font></b></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;第一步，先找出你怪獸的 [時間組別] 和 [對手組別]。&quot;}"><font face="Noto Sans CJK SC" color="#000000">第一步，先找出你怪獸的 [時間組別] 和 [對手組別]。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;第二步，對照時間組，就能知道大概幾點會有遭遇戰。&quot;}"><font face="Noto Sans CJK SC" color="#000000">第二步，對照時間組，就能知道大概幾點會有遭遇戰。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;第三步，對照對手組，就能知道當時會遇到哪隻怪。&quot;}"><font face="Noto Sans CJK SC" color="#000000">第三步，對照對手組，就能知道當時會遇到哪隻怪。</font></td>
+		</tr>
+	<tr>
+		<td colspan=24 height="25" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font face="Microsoft JhengHei" color="#000000"><br></font></td>
+		</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br></font></td>
+		<td colspan=2 rowspan=2 align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br><img src="assets/encounter_html_770af18b.png" width=25 height=25 hspace=12 vspace=9>
+		</font></td>
+		<td colspan=2 rowspan=2 align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br><img src="assets/encounter_html_ef843932.png" width=25 height=25 hspace=12 vspace=9>
+		</font></td>
+		<td colspan=2 rowspan=2 align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br><img src="assets/encounter_html_c4a3cdaf.png" width=25 height=25 hspace=12 vspace=9>
+		</font></td>
+		<td colspan=2 rowspan=2 align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br><img src="assets/encounter_html_64999188.png" width=25 height=25 hspace=12 vspace=9>
+		</font></td>
+		<td colspan=2 rowspan=2 align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br><img src="assets/encounter_html_da042edd.png" width=25 height=25 hspace=12 vspace=9>
+		</font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br></font></td>
+		<td align="left" valign=bottom data-sheets-value="{ &quot;1&quot;: 2, &quot;2&quot;: &quot;&quot;}"><font color="#000000"><br></font></td>
+	</tr>
+</table>
+<img src="assets/encounter_html_770af18b.png" width=25 height=25>
+<img src="assets/encounter_html_91f760fa.png" width=25 height=25>
+<img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25>
+<img src="assets/encounter_html_c4a3cdaf.png" width=25 height=25>
+<img src="assets/encounter_html_f303bda0.png" width=25 height=25>
+<img src="assets/encounter_html_52390eb7.png" width=25 height=25>
+<img src="assets/encounter_html_64999188.png" width=25 height=25>
+<img src="assets/encounter_html_723e7f2f.png" width=25 height=25>
+<img src="assets/encounter_html_e773c1f8.png" width=25 height=25>
+<img src="assets/encounter_html_ef843932.png" width=25 height=25>
+<img src="assets/encounter_html_f91b24d0.png" width=25 height=25>
+<img src="assets/encounter_html_92819170.png" width=25 height=25>
+<img src="assets/encounter_html_d169a8c9.png" width=25 height=25>
+<img src="assets/encounter_html_2a853326.png" width=25 height=25>
+<img src="assets/encounter_html_58396f6.png" width=25 height=25>
+<img src="assets/encounter_html_38fd7a41.png" width=25 height=25>
+<img src="assets/encounter_html_355a9098.png" width=25 height=25>
+<img src="assets/encounter_html_41a6dd83.png" width=25 height=25>
+<img src="assets/encounter_html_57036a3b.png" width=25 height=25>
+<img src="assets/encounter_html_40b43b3.png" width=25 height=25>
+<img src="assets/encounter_html_31dd9029.png" width=25 height=25>
+<img src="assets/encounter_html_da042edd.png" width=25 height=25>
+<img src="assets/encounter_html_9b24aee4.png" width=25 height=25>
+<img src="assets/encounter_html_c0bd89f.png" width=25 height=25>
+<img src="assets/encounter_html_ff13ff10.png" width=25 height=25>
+<img src="assets/encounter_html_9a238955.png" width=25 height=25>
+<img src="assets/encounter_html_d14d010c.png" width=25 height=25>
+<img src="assets/encounter_html_a82be5f3.png" width=25 height=25>
+<img src="assets/encounter_html_906929b3.png" width=25 height=25>
+<img src="assets/encounter_html_ee8b3ac1.png" width=25 height=25>
+<img src="assets/encounter_html_39d8586a.png" width=25 height=25>
+<img src="assets/encounter_html_2f7f9e9a.png" width=25 height=25>
+<img src="assets/encounter_html_c4a3cdaf.png" width=25 height=25>
+<img src="assets/encounter_html_a82be5f3.png" width=25 height=25>
+<img src="assets/encounter_html_64999188.png" width=25 height=25 hspace=12 vspace=0>
+<img src="assets/encounter_html_770af18b.png" width=25 height=25>
+<img src="assets/encounter_html_770af18b.png" width=25 height=25>
+<img src="assets/encounter_html_c4a3cdaf.png" width=25 height=25>
+<img src="assets/encounter_html_38fd7a41.png" width=25 height=25>
+<img src="assets/encounter_html_d169a8c9.png" width=25 height=25>
+<img src="assets/encounter_html_f303bda0.png" width=25 height=25 hspace=12 vspace=0>
+<img src="assets/encounter_html_da042edd.png" width=25 height=25>
+<img src="assets/encounter_html_c4a3cdaf.png" width=25 height=25 hspace=12 vspace=0>
+<img src="assets/encounter_html_39d8586a.png" width=25 height=25>
+<img src="assets/encounter_html_40b43b3.png" width=25 height=25>
+<img src="assets/encounter_html_a82be5f3.png" width=25 height=25>
+<img src="assets/encounter_html_9b24aee4.png" width=25 height=25>
+<img src="assets/encounter_html_ff13ff10.png" width=25 height=25>
+<img src="assets/encounter_html_c4a3cdaf.png" width=25 height=25>
+<img src="assets/encounter_html_770af18b.png" width=25 height=25>
+<img src="assets/encounter_html_2a853326.png" width=25 height=25>
+<img src="assets/encounter_html_9a238955.png" width=25 height=25 hspace=12 vspace=0>
+<img src="assets/encounter_html_906929b3.png" width=25 height=25>
+<img src="assets/encounter_html_92819170.png" width=25 height=25>
+<img src="assets/encounter_html_723e7f2f.png" width=25 height=25>
+<img src="assets/encounter_html_39d8586a.png" width=25 height=25>
+<img src="assets/encounter_html_9b24aee4.png" width=25 height=25 hspace=12 vspace=0>
+<img src="assets/encounter_html_ff13ff10.png" width=25 height=25>
+<img src="assets/encounter_html_2f7f9e9a.png" width=25 height=25 hspace=12 vspace=0>
+<img src="assets/encounter_html_f91b24d0.png" width=25 height=25>
+<img src="assets/encounter_html_9a238955.png" width=25 height=25>
+<img src="assets/encounter_html_40b43b3.png" width=25 height=25>
+<img src="assets/encounter_html_906929b3.png" width=25 height=25>
+<img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25>
+<img src="assets/encounter_html_2a853326.png" width=25 height=25 hspace=12 vspace=0>
+<img src="assets/encounter_html_9b24aee4.png" width=25 height=25>
+<img src="assets/encounter_html_906929b3.png" width=25 height=25 hspace=12 vspace=0>
+<img src="assets/encounter_html_9a238955.png" width=25 height=25>
+<img src="assets/encounter_html_f303bda0.png" width=25 height=25>
+<img src="assets/encounter_html_a82be5f3.png" width=25 height=25 hspace=12 vspace=0>
+<img src="assets/encounter_html_9a238955.png" width=25 height=25>
+<img src="assets/encounter_html_31dd9029.png" width=25 height=25>
+<img src="assets/encounter_html_40b43b3.png" width=25 height=25>
+<img src="assets/encounter_html_f303bda0.png" width=25 height=25>
+<img src="assets/encounter_html_2f7f9e9a.png" width=25 height=25 hspace=12 vspace=0>
+<img src="assets/encounter_html_9b24aee4.png" width=25 height=25>
+<img src="assets/encounter_html_723e7f2f.png" width=25 height=25>
+<img src="assets/encounter_html_2f7f9e9a.png" width=25 height=25>
+<img src="assets/encounter_html_906929b3.png" width=25 height=25 hspace=12 vspace=0>
+<img src="assets/encounter_html_f303bda0.png" width=25 height=25>
+<img src="assets/encounter_html_39d8586a.png" width=25 height=25 hspace=12 vspace=0>
+<img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=0>
+<img src="assets/encounter_html_52390eb7.png" width=25 height=25>
+<img src="assets/encounter_html_c4a3cdaf.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_a82be5f3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_64999188.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_770af18b.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_770af18b.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_c4a3cdaf.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_38fd7a41.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_770af18b.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_d169a8c9.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_ef843932.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_f303bda0.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_da042edd.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_57036a3b.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_c4a3cdaf.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_39d8586a.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_40b43b3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_ff13ff10.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_91f760fa.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_a82be5f3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_64999188.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_9b24aee4.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_ef843932.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_ff13ff10.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_2a853326.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_c4a3cdaf.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_38fd7a41.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_770af18b.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_39d8586a.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_2a853326.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_9a238955.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_906929b3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_92819170.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_a82be5f3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_723e7f2f.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_2f7f9e9a.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_39d8586a.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_f91b24d0.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_9b24aee4.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_723e7f2f.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_ff13ff10.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_f303bda0.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_2f7f9e9a.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_f91b24d0.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_ef843932.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_9a238955.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_40b43b3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_906929b3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_38fd7a41.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_31dd9029.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_2a853326.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_9b24aee4.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_40b43b3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_906929b3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_9a238955.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_f303bda0.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_a82be5f3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_9a238955.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_ef843932.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_31dd9029.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_40b43b3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_2a853326.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_f303bda0.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_41a6dd83.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_2f7f9e9a.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_9b24aee4.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_52390eb7.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_2a853326.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_723e7f2f.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_41a6dd83.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_2f7f9e9a.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_58396f6.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_906929b3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_f303bda0.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_2a853326.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_39d8586a.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_52390eb7.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_9b24aee4.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_df135ae0.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_8b8f9bd1.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_770af18b.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_c4a3cdaf.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_64999188.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_ef843932.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_d169a8c9.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_38fd7a41.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_57036a3b.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_da042edd.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_ff13ff10.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_a82be5f3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_39d8586a.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_91f760fa.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_f303bda0.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_723e7f2f.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_f91b24d0.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_2a853326.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_355a9098.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_40b43b3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_9b24aee4.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_9a238955.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_906929b3.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_2f7f9e9a.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_a6f4d7f1.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_52390eb7.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_e773c1f8.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_92819170.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_58396f6.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_41a6dd83.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_31dd9029.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_c0bd89f.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_d14d010c.png" width=25 height=25 hspace=12 vspace=9>
+<img src="assets/encounter_html_ee8b3ac1.png" width=25 height=25 hspace=12 vspace=9>
+<br clear=left>
+<!-- ************************************************************************** -->
+</div></main></body></html>
