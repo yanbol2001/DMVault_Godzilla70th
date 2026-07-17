@@ -81,3 +81,47 @@
 @media (min-width:781px){
   .route-area{grid-template-columns:repeat(auto-fill,160px) !important}
 }
+
+/* V1.3.3：進化卡統一從右側起點流式排列；第二列不再落到來源卡下方 */
+.evolution-sheet{overflow:visible}
+.sheet-row{align-items:flex-start;overflow:visible}
+.source-panel{align-self:stretch}
+.route-area{
+  align-self:flex-start;
+  grid-auto-flow:row !important;
+  grid-auto-rows:max-content;
+  align-items:start !important;
+  align-content:start !important;
+  justify-content:start !important;
+  overflow:visible !important;
+}
+.route-column{
+  align-self:start !important;
+  margin:0 !important;
+}
+.route-fields{
+  display:grid;
+  grid-template-columns:58px 102px;
+  grid-auto-rows:39px;
+}
+.route-label,.route-value{
+  min-height:39px !important;
+  height:39px;
+}
+.route-column:not(.special-route){
+  height:401px !important;
+  min-height:401px !important;
+}
+.route-column.special-route{
+  height:128px !important;
+  min-height:128px !important;
+}
+@media (min-width:781px){
+  .route-area{
+    grid-template-columns:repeat(auto-fill,160px) !important;
+  }
+}
+@media (max-width:780px){
+  .route-fields{grid-template-columns:58px minmax(0,1fr)}
+  .route-column:not(.special-route){height:401px !important}
+}
