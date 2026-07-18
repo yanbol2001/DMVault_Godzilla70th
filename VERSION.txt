@@ -1,1 +1,2 @@
-DMVault Godzilla70th V2.0
+DMVault Godzilla 70th V2.1
+圖鑑改為彩超式共用節點技能樹：同一畫布、階段分欄、彩色連線、縮放拖曳與關聯高亮。
