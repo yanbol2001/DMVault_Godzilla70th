@@ -231,3 +231,91 @@ body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linea
   .extra-media-frame{min-height:62px}
   .extra-media-card.closeup .extra-media-frame img{max-height:82px}
 }
+
+/* V3.0 RC5：計時與已養過移到每隻怪獸右側，方便同時培養多台 */
+.sheet-row{
+  display:grid !important;
+  grid-template-columns:350px minmax(0,1fr) 260px;
+  align-items:start !important;
+}
+.source-panel{
+  width:auto !important;
+  min-width:0;
+  flex:none !important;
+  border-right:3px solid var(--gz-purple) !important;
+}
+.route-area{
+  width:100%;
+  min-width:0;
+}
+.care-side{
+  width:260px;
+  min-width:260px;
+  align-self:stretch;
+  background:linear-gradient(180deg,#1b1225,#100b17);
+  border-left:3px solid #8b5cf6;
+  color:#fff;
+}
+.care-side-head{
+  min-height:62px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:3px;
+  padding:10px 12px;
+  background:linear-gradient(135deg,#100b16,#32184d);
+  border-bottom:1px solid #654b84;
+}
+.care-side-head strong{font-size:17px;color:#fff}
+.care-side-head span{font-size:13px;color:#d8cbea;font-weight:800}
+.care-side .care-tools{
+  border-top:0;
+  padding:12px;
+  background:transparent;
+}
+.care-side .care-actions{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
+.care-side .care-start,
+.care-side .owned-toggle{
+  width:100%;
+  margin:0;
+  justify-content:center;
+}
+.care-side .care-timer{margin-top:12px}
+.care-side .timer-grid{grid-template-columns:1fr}
+.care-side .timer-meta{flex-direction:column;align-items:flex-start}
+.care-side .timer-buttons{display:grid;grid-template-columns:1fr 1fr}
+.care-side .timer-buttons button{width:100%}
+
+@media (max-width:1180px) and (min-width:781px){
+  .sheet-row{grid-template-columns:350px minmax(0,1fr)}
+  .care-side{
+    grid-column:2;
+    width:100%;
+    min-width:0;
+    border-left:0;
+    border-top:3px solid #8b5cf6;
+  }
+  .care-side .care-actions{grid-template-columns:minmax(150px,1fr) minmax(150px,1fr)}
+  .care-side .timer-grid{grid-template-columns:1fr 1fr}
+  .care-side .timer-meta{flex-direction:row;align-items:center}
+}
+@media(max-width:780px){
+  .sheet-row{display:block !important}
+  .care-side{
+    width:100%;
+    min-width:0;
+    border-left:0;
+    border-top:3px solid #8b5cf6;
+  }
+  .care-side .care-actions{grid-template-columns:1fr 1fr}
+  .care-side .timer-grid{grid-template-columns:1fr 1fr}
+  .care-side .timer-meta{flex-direction:row;align-items:center}
+}
+@media(max-width:520px){
+  .care-side .care-actions,.care-side .timer-grid,.care-side .timer-buttons{grid-template-columns:1fr}
+  .care-side .timer-meta{flex-direction:column;align-items:flex-start}
+}
