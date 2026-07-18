@@ -259,3 +259,22 @@ body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linea
   .route-area{grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}.route-column{min-width:0}
 }
 @media(max-width:440px){.route-area{grid-template-columns:1fr}}
+
+/* V3.0 RC6.1：修正路線卡固定高度裁掉培養計時與已養過按鈕 */
+.route-column,
+.route-column:not(.special-route),
+.route-column:has(.route-fields),
+.route-column.special-route:has(.route-fields){
+  height:auto !important;
+  min-height:0 !important;
+}
+.route-column{align-self:stretch !important;overflow:hidden !important}
+.route-fields{flex:0 0 auto !important}
+.route-care{display:block !important;visibility:visible !important;flex:0 0 auto !important;margin-top:0 !important}
+.route-care .care-tools,.route-care .care-actions,.route-care .owned-toggle,.route-care .care-start{display:flex !important}
+.route-care .care-actions{flex-direction:column !important;align-items:stretch !important}
+.route-care .owned-toggle,.route-care .care-start{width:100% !important}
+@media (min-width:781px){
+  .route-area{grid-auto-rows:auto !important;align-items:stretch !important}
+  .route-column{height:100% !important}
+}
