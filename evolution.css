@@ -303,3 +303,38 @@ body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linea
 .route-care .timer-buttons{grid-template-columns:1fr 1fr !important;gap:4px !important;margin-top:5px}
 .route-care .timer-buttons button{min-height:27px !important;padding:3px 4px !important;font-size:10px !important;border-radius:6px !important}
 @media(max-width:520px){.route-care .care-actions{grid-template-columns:1fr auto 1fr !important}.route-care .care-start,.route-care .owned-toggle{font-size:10px !important;padding:3px 4px !important}.compact-time{min-width:43px;font-size:10px}}
+
+/* V3.0 RC7.1：桌面版每列最多 8 隻，卡片加寬並自動換行 */
+.route-area{
+  grid-template-columns:repeat(8,minmax(180px,1fr)) !important;
+  grid-auto-flow:row !important;
+  grid-auto-rows:auto !important;
+  align-content:start !important;
+  overflow-x:visible !important;
+}
+.route-column{
+  width:auto !important;
+  min-width:180px !important;
+  max-width:none !important;
+}
+.route-care .care-actions{
+  grid-template-columns:minmax(78px,1fr) 52px minmax(76px,1fr) !important;
+}
+@media(max-width:1800px) and (min-width:1501px){
+  .route-area{grid-template-columns:repeat(7,minmax(180px,1fr)) !important}
+}
+@media(max-width:1500px) and (min-width:1201px){
+  .route-area{grid-template-columns:repeat(5,minmax(180px,1fr)) !important}
+}
+@media(max-width:1200px) and (min-width:781px){
+  .sheet-row{display:block !important}
+  .source-panel{width:100% !important;flex:none !important;border-right:0 !important;border-bottom:3px solid #111 !important}
+  .route-area{grid-template-columns:repeat(4,minmax(180px,1fr)) !important}
+}
+@media(max-width:780px){
+  .route-area{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  .route-column{min-width:0 !important}
+}
+@media(max-width:440px){
+  .route-area{grid-template-columns:1fr !important}
+}
