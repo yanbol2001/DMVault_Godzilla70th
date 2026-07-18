@@ -108,3 +108,12 @@
 .care-compact-buttons{display:inline-flex!important;grid-template-columns:none!important;gap:4px!important;margin-left:8px!important}
 .care-compact-buttons button{min-height:24px!important;padding:2px 8px!important;color:#402233!important;background:#fff!important}
 .compact-time{color:#402233!important;font-weight:800!important}
+
+/* RC9 compact timer */
+.route-owned-toggle{top:6px;right:6px;width:26px;height:26px;border-radius:6px}
+.route-owned-toggle input:checked+span{font-size:18px}
+.care-tools{display:flex!important;align-items:center;gap:8px;flex-wrap:nowrap}
+.care-start{flex:1}
+.care-countdown{font-weight:700;color:#4b2358;background:transparent!important;padding:0!important}
+.care-compact-buttons,.care-buttons{display:flex;gap:4px}
+.care-compact-buttons button,.care-buttons button{padding:2px 8px;font-size:13px}
