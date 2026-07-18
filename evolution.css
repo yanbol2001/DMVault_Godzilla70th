@@ -139,3 +139,12 @@ body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linea
 .route-area{background:#130e1a!important;padding:9px!important;gap:9px!important}.route-column{border:1px solid #5a4371!important;border-radius:12px!important;overflow:hidden!important;background:#fff!important;box-shadow:0 8px 20px #0006!important;transition:.18s ease}.route-column:hover{transform:translateY(-2px);border-color:#a78bfa!important;box-shadow:0 12px 26px #0008,0 0 17px #7c3aed44!important}
 .route-label{background:#f7f2fc!important}.route-value{background:#fff!important;color:#111!important}.route-value.muted{color:#999!important}.no-route{background:#1b1325!important;color:#c5b8d5!important;border-radius:12px!important}
 .back-top{background:#6d28d9!important;color:#fff!important;border-color:#c4b5fd!important}
+
+/* V1.5.1：修正進化條件白底白字，所有資料不需反白即可閱讀 */
+.route-label{color:#21152f!important;font-weight:700!important;background:#f4eef9!important;text-shadow:none!important}
+.route-value{color:#111!important;background:#fff!important;font-weight:500!important;text-shadow:none!important}
+.route-value.muted{color:#8b8392!important}
+.route-column *::selection{background:#8b5cf6;color:#fff}
+.source-panel,.source-panel *{color:#111}
+.source-title-jp,.source-title-jp *,.route-head strong,.route-head strong *{color:#fff!important}
+.attribute-tag{color:#2451d1!important}
