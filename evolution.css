@@ -148,3 +148,10 @@ body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linea
 .source-panel,.source-panel *{color:#111}
 .source-title-jp,.source-title-jp *,.route-head strong,.route-head strong *{color:#fff!important}
 .attribute-tag{color:#2451d1!important}
+
+/* V2.2.1：G侵蝕／特殊模式只要有條件資料，就顯示完整卡片 */
+.route-column.special-route:has(.route-fields){
+  height:401px !important;
+  min-height:401px !important;
+}
+.route-column.special-route:has(.route-fields) .route-fields{display:grid !important}
