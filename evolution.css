@@ -163,3 +163,10 @@ body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linea
 /* 所有有條件的進化卡都完整顯示，卡片高度一致 */
 .route-column:has(.route-fields){height:401px!important;min-height:401px!important}.route-column:has(.route-fields) .route-fields{display:grid!important}.route-area{align-items:start!important}.evolution-sheet{scroll-margin-top:190px}
 @media(max-width:780px){.evo-tools input{min-width:0;width:100%}.care-actions{flex-wrap:wrap}.owned-toggle{margin-left:0}.timer-grid{grid-template-columns:1fr}.timer-meta{flex-direction:column}.care-start{flex:1}}
+
+/* 進化目標圖片／名稱：點擊跳到該怪獸資料 */
+.route-head.route-jump{cursor:pointer;transition:transform .16s ease,filter .16s ease,box-shadow .16s ease}
+.route-head.route-jump:hover,.route-head.route-jump:focus-visible{transform:translateY(-2px);filter:brightness(1.06);box-shadow:inset 0 0 0 3px #9b5cff;outline:none}
+.route-head.route-jump:active{transform:translateY(0)}
+.evolution-sheet.jump-highlight{animation:evoJumpHighlight 2.2s ease}
+@keyframes evoJumpHighlight{0%,35%{outline:6px solid #a855f7;outline-offset:4px;box-shadow:0 0 34px #8b5cf6cc}100%{outline-color:transparent;box-shadow:none}}

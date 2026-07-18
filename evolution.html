@@ -516,4 +516,34 @@
   if(location.hash){const target=document.querySelector(location.hash);if(target){setTimeout(()=>{target.scrollIntoView({behavior:'smooth',block:'start'});target.classList.add('jump-highlight');setTimeout(()=>target.classList.remove('jump-highlight'),2400)},180)}}
 })();
 </script>
-</body></html>
+<script>
+(()=>{
+  const normalize=s=>(s||'').replace(/\s+/g,'').replace(/[：:]/g,':').trim();
+  const nameToId=new Map();
+  document.querySelectorAll('.evolution-sheet[id]').forEach(sheet=>{
+    const name=sheet.querySelector('.source-title-zh')?.textContent;
+    if(name) nameToId.set(normalize(name),sheet.id);
+  });
+  document.querySelectorAll('.route-head').forEach(head=>{
+    const name=head.querySelector('strong')?.textContent || head.querySelector('img')?.alt;
+    const targetId=nameToId.get(normalize(name));
+    if(!targetId) return;
+    head.classList.add('route-jump');
+    head.setAttribute('role','link');
+    head.setAttribute('tabindex','0');
+    head.setAttribute('title',`前往 ${name.trim()} 的進化資料`);
+    const jump=()=>{
+      const target=document.getElementById(targetId);
+      if(!target) return;
+      history.replaceState(null,'',`#${targetId}`);
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+      target.classList.remove('jump-highlight');
+      void target.offsetWidth;
+      target.classList.add('jump-highlight');
+      setTimeout(()=>target.classList.remove('jump-highlight'),2200);
+    };
+    head.addEventListener('click',jump);
+    head.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();jump();}});
+  });
+})();
+</script></body></html>
