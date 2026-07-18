@@ -1,2 +1,1 @@
-DMVault Godzilla 70th V2.3
-新增總覽首頁，進化頁移至 evolution.html。
+V2.3.1
