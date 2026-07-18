@@ -232,90 +232,30 @@ body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linea
   .extra-media-card.closeup .extra-media-frame img{max-height:82px}
 }
 
-/* V3.0 RC5：計時與已養過移到每隻怪獸右側，方便同時培養多台 */
-.sheet-row{
-  display:grid !important;
-  grid-template-columns:350px minmax(0,1fr) 260px;
-  align-items:start !important;
-}
-.source-panel{
-  width:auto !important;
-  min-width:0;
-  flex:none !important;
-  border-right:3px solid var(--gz-purple) !important;
-}
-.route-area{
-  width:100%;
-  min-width:0;
-}
-.care-side{
-  width:260px;
-  min-width:260px;
-  align-self:stretch;
-  background:linear-gradient(180deg,#1b1225,#100b17);
-  border-left:3px solid #8b5cf6;
-  color:#fff;
-}
-.care-side-head{
-  min-height:62px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:3px;
-  padding:10px 12px;
-  background:linear-gradient(135deg,#100b16,#32184d);
-  border-bottom:1px solid #654b84;
-}
-.care-side-head strong{font-size:17px;color:#fff}
-.care-side-head span{font-size:13px;color:#d8cbea;font-weight:800}
-.care-side .care-tools{
-  border-top:0;
-  padding:12px;
-  background:transparent;
-}
-.care-side .care-actions{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:10px;
-}
-.care-side .care-start,
-.care-side .owned-toggle{
-  width:100%;
-  margin:0;
-  justify-content:center;
-}
-.care-side .care-timer{margin-top:12px}
-.care-side .timer-grid{grid-template-columns:1fr}
-.care-side .timer-meta{flex-direction:column;align-items:flex-start}
-.care-side .timer-buttons{display:grid;grid-template-columns:1fr 1fr}
-.care-side .timer-buttons button{width:100%}
 
-@media (max-width:1180px) and (min-width:781px){
-  .sheet-row{grid-template-columns:350px minmax(0,1fr)}
-  .care-side{
-    grid-column:2;
-    width:100%;
-    min-width:0;
-    border-left:0;
-    border-top:3px solid #8b5cf6;
-  }
-  .care-side .care-actions{grid-template-columns:minmax(150px,1fr) minmax(150px,1fr)}
-  .care-side .timer-grid{grid-template-columns:1fr 1fr}
-  .care-side .timer-meta{flex-direction:row;align-items:center}
-}
+/* V3.0 RC6：計時與已養過放在每個進化目標下方 */
+.sheet-row{display:flex !important;width:100%;align-items:stretch !important}
+.source-panel{width:350px !important;flex:0 0 350px !important;border-right:3px solid #111 !important}
+.route-area{display:grid;grid-template-columns:repeat(var(--route-columns),minmax(180px,1fr));align-items:stretch}
+.route-column{display:flex;flex-direction:column;min-width:180px}
+.route-fields{flex:0 0 auto}
+.route-care{margin-top:auto;border-top:3px solid #8b5cf6;background:linear-gradient(180deg,#1b1225,#100b17);color:#fff}
+.route-care-title{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:7px 8px;background:linear-gradient(135deg,#100b16,#32184d);border-bottom:1px solid #654b84}
+.route-care-title strong{font-size:13px}.route-care-title span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#d8cbea;font-size:11px;font-weight:800}
+.route-care .care-tools{border-top:0;background:transparent;padding:8px}
+.route-care .care-actions{display:grid;grid-template-columns:1fr;gap:7px}
+.route-care .care-start,.route-care .owned-toggle{width:100%;margin:0;justify-content:center;min-height:38px;padding:6px 8px;font-size:13px}
+.route-care .owned-toggle span:before{width:21px;height:21px;font-size:16px}
+.route-care .care-timer{margin-top:8px;padding:7px}
+.route-care .timer-grid{grid-template-columns:1fr;gap:5px}
+.route-care .timer-grid>div{padding:5px}.route-care .timer-grid strong{font-size:14px}
+.route-care .timer-meta{flex-direction:column;align-items:flex-start;margin:6px 0;font-size:10px}
+.route-care .timer-buttons{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.route-care .timer-buttons button{width:100%;padding:6px 5px;font-size:12px}
+.route-column.is-owned{box-shadow:inset 0 0 0 3px #22c55e;background:#f0fdf4}
+.route-column.is-owned .route-head strong:after{content:' ✓';color:#86efac}
 @media(max-width:780px){
-  .sheet-row{display:block !important}
-  .care-side{
-    width:100%;
-    min-width:0;
-    border-left:0;
-    border-top:3px solid #8b5cf6;
-  }
-  .care-side .care-actions{grid-template-columns:1fr 1fr}
-  .care-side .timer-grid{grid-template-columns:1fr 1fr}
-  .care-side .timer-meta{flex-direction:row;align-items:center}
+  .sheet-row{display:block !important}.source-panel{width:100% !important;flex:none !important;border-right:0 !important;border-bottom:3px solid #111 !important}
+  .route-area{grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}.route-column{min-width:0}
 }
-@media(max-width:520px){
-  .care-side .care-actions,.care-side .timer-grid,.care-side .timer-buttons{grid-template-columns:1fr}
-  .care-side .timer-meta{flex-direction:column;align-items:flex-start}
-}
+@media(max-width:440px){.route-area{grid-template-columns:1fr}}
