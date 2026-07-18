@@ -26,3 +26,36 @@
 .care-tools.timer-frozen .care-countdown{background:#26364c;border-color:#6683aa}
 .care-tools.timer-frozen .care-countdown-label::after{content:'（冷凍）'}
 @media(max-width:720px){.route-owned-toggle{width:31px;height:31px;top:6px;right:6px}.care-start{font-size:15px;min-height:38px}.compact-time{font-size:16px}}
+
+
+/* v1.1 修正：右上角只保留單一已養過框；計時器採總小時倒數並直式排列 */
+.route-owned-toggle{
+  width:38px!important;
+  height:38px!important;
+  min-height:0!important;
+  padding:0!important;
+  margin:0!important;
+  display:grid!important;
+  place-items:center!important;
+  border:2px solid #8b5cf6!important;
+  border-radius:10px!important;
+}
+.route-owned-toggle span{display:grid!important;place-items:center!important;width:100%!important;height:100%!important;font-size:0!important;gap:0!important}
+.route-owned-toggle span::before{content:none!important;display:none!important}
+.route-owned-toggle input:checked + span{font-size:25px!important;color:#fff!important}
+.route-column.is-owned .route-head strong::after{content:none!important;display:none!important}
+
+.route-care .care-tools{display:grid!important;gap:6px!important;padding:8px!important}
+.route-care .care-actions{display:block!important}
+.route-care .care-start{display:block!important;width:100%!important;min-height:38px!important;padding:6px 8px!important;font-size:13px!important}
+.route-care .care-countdown{width:100%!important;min-height:38px!important;display:flex!important;justify-content:center!important;gap:7px!important;padding:5px 8px!important}
+.route-care .care-countdown[hidden]{display:none!important}
+.route-care .care-countdown-label{font-size:11px!important}
+.route-care .compact-time{min-width:82px!important;min-height:0!important;padding:0!important;border:0!important;background:transparent!important;font-size:15px!important;white-space:nowrap!important}
+.route-care .care-timer{margin-top:0!important;padding:0!important;background:transparent!important;border:0!important}
+.route-care .care-compact-buttons{display:grid!important;grid-template-columns:1fr 1fr!important;gap:6px!important;margin:0!important}
+.route-care .care-compact-buttons button{min-height:31px!important;padding:4px 6px!important;font-size:11px!important}
+@media(max-width:520px){
+  .route-owned-toggle{width:34px!important;height:34px!important}
+  .route-care .compact-time{min-width:76px!important;font-size:14px!important}
+}

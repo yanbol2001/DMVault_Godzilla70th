@@ -1,1 +1,2 @@
-DMVault Godzilla 70th V3.0 RC8 Common Timer Phase 1
+DMVault Godzilla 70th V3.0 RC8.1
+總小時倒數／已養過重複與計時排版修正

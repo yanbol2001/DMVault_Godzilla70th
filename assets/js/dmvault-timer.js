@@ -5,7 +5,7 @@ const body=document.body;
 const TIMER_KEY=body.dataset.dmvaultTimerKey||'dmvault_timer_';
 const OWNED_KEY=body.dataset.dmvaultOwnedKey||'dmvault_owned_';
 const now=()=>Date.now();
-const fmt=sec=>{sec=Math.max(0,Math.ceil(sec));const d=Math.floor(sec/86400);sec%=86400;const h=Math.floor(sec/3600);sec%=3600;const m=Math.floor(sec/60),s=sec%60;const clock=[h,m,s].map(n=>String(n).padStart(2,'0')).join(':');return d?`${d}天 ${clock}`:clock};
+const fmt=sec=>{sec=Math.max(0,Math.ceil(sec));const h=Math.floor(sec/3600);sec%=3600;const m=Math.floor(sec/60),s=sec%60;return [h,m,s].map(n=>String(n).padStart(2,'0')).join(':')};
 const read=(key)=>{try{return JSON.parse(localStorage.getItem(key)||'null')}catch{return null}};
 const write=(key,val)=>localStorage.setItem(key,JSON.stringify(val));
 const boxes=[...document.querySelectorAll('.care-tools[data-timer-id]')];
