@@ -1,5 +1,9 @@
-V2.0：圖鑑改為 61 條完整進化路徑分離顯示；G細胞圖片製作 4 倍最近鄰像素放大版本。
+DMVault Godzilla 70th V2.3
 
-V2.1：圖鑑改為彩超式共用節點技能樹。
-
-V2.2.2：補回爛泥獸 → 喪屍暴龍獸：G侵蝕模式完整條件。
+首頁：index.html
+進化：evolution.html
+圖鑑：dex.html
+關卡：stage.html
+背景：background.html
+G細胞：gcell.html
+隨機遭遇：encounter.html

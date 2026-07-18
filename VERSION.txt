@@ -1,2 +1,2 @@
-DMVault Godzilla70th V2.2.2
-修正爛泥獸進化至喪屍暴龍獸：G侵蝕模式的條件卡遺漏。
+DMVault Godzilla 70th V2.3
+新增總覽首頁，進化頁移至 evolution.html。
