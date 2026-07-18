@@ -170,3 +170,15 @@ body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linea
 .route-head.route-jump:active{transform:translateY(0)}
 .evolution-sheet.jump-highlight{animation:evoJumpHighlight 2.2s ease}
 @keyframes evoJumpHighlight{0%,35%{outline:6px solid #a855f7;outline-offset:4px;box-shadow:0 0 34px #8b5cf6cc}100%{outline-color:transparent;box-shadow:none}}
+
+/* RC2：已養過標記強化 */
+.owned-toggle{position:relative;display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:7px 14px 7px 10px;border:2px solid #7c3aed;border-radius:12px;background:#fff;color:#3b185d;font-weight:900;cursor:pointer;user-select:none;box-shadow:0 3px 10px #0002;transition:.16s ease}
+.owned-toggle:hover{transform:translateY(-1px);box-shadow:0 6px 15px #0003}
+.owned-toggle input{position:absolute;opacity:0;pointer-events:none}
+.owned-toggle span{display:flex;align-items:center;gap:8px}
+.owned-toggle span:before{content:"";width:25px;height:25px;display:grid;place-items:center;border:2px solid #7c3aed;border-radius:7px;background:#f7f2ff;color:#fff;font-size:19px;line-height:1}
+.owned-toggle input:checked + span:before{content:"✓";background:#16a34a;border-color:#15803d;box-shadow:0 0 0 3px #dcfce7}
+.owned-toggle input:checked + span{color:#166534}
+.evolution-sheet.is-owned{outline:4px solid #22c55e;outline-offset:3px;box-shadow:0 0 0 7px #dcfce7,0 14px 30px #0003}
+.evolution-sheet.is-owned .source-title-zh:after{content:"  ✓ 已養過";display:inline-block;margin-left:10px;padding:3px 8px;border-radius:999px;background:#16a34a;color:#fff;font-size:12px;vertical-align:middle;box-shadow:0 2px 6px #0003}
+@media(max-width:520px){.owned-toggle{width:100%;justify-content:center}.evolution-sheet.is-owned .source-title-zh:after{display:block;width:max-content;margin:5px auto 0}}
