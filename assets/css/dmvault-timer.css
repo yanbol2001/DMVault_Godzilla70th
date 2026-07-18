@@ -59,3 +59,34 @@
   .route-owned-toggle{width:34px!important;height:34px!important}
   .route-care .compact-time{min-width:76px!important;font-size:14px!important}
 }
+
+/* v1.2 彩超式緊湊計時：開始按鈕與倒數共用同一位置 */
+.route-care{padding:6px 8px!important}
+.route-care .care-tools{gap:6px!important;padding:0!important}
+.route-care .care-actions{display:grid!important;grid-template-columns:1fr!important;gap:0!important}
+.route-care .care-start,
+.route-care .care-countdown{grid-area:1 / 1!important;width:100%!important;min-height:40px!important;margin:0!important}
+.route-care .care-tools.timer-active .care-start,
+.route-care .care-start[hidden]{display:none!important}
+.route-care .care-countdown[hidden]{display:none!important}
+.route-care .care-tools:not(.timer-active) .care-countdown{display:none!important}
+.route-care .care-tools.timer-active .care-countdown{display:flex!important}
+.route-care .care-countdown{padding:5px 8px!important;gap:0!important}
+.route-care .care-countdown-label{display:none!important}
+.route-care .compact-time{min-width:0!important;font-size:17px!important;line-height:1!important;color:#fff!important}
+.route-care .care-compact-controls{margin-top:0!important}
+.route-care .care-compact-buttons button{
+  min-height:34px!important;
+  color:#2b1720!important;
+  background:#fff6f9!important;
+  border-color:#563746!important;
+  text-shadow:none!important;
+  -webkit-text-fill-color:#2b1720!important;
+}
+.route-care .care-compact-buttons button:hover{background:#f4e3e9!important}
+.route-care .care-tools.timer-frozen .freeze-btn{background:#26364c!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+@media(max-width:520px){
+  .route-care{padding:5px 7px!important}
+  .route-care .care-start,.route-care .care-countdown{min-height:38px!important}
+  .route-care .care-compact-buttons button{min-height:32px!important}
+}

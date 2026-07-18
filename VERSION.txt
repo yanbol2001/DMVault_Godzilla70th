@@ -1,2 +1,2 @@
-DMVault Godzilla 70th V3.0 RC8.1
-總小時倒數／已養過重複與計時排版修正
+DMVault Godzilla 70th V3.0 RC8.2
+彩超式計時切換／控制按鈕可讀性修正
