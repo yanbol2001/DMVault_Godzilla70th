@@ -278,3 +278,28 @@ body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linea
   .route-area{grid-auto-rows:auto !important;align-items:stretch !important}
   .route-column{height:100% !important}
 }
+
+
+/* V3.0 RC7：精簡多機培養列 + 進化目標成長階段 */
+.route-head{display:grid !important;grid-template-columns:auto 1fr !important;grid-template-rows:auto auto !important;column-gap:8px !important;align-items:center !important}
+.route-head .route-sprite{grid-row:1 / span 2}
+.route-head strong{grid-column:2;align-self:end;line-height:1.15}
+.route-stage{grid-column:2;align-self:start;display:block;margin-top:3px;color:#6b5878;font-size:11px;font-weight:900;line-height:1.2}
+.route-care{border-top:2px solid #8b5cf6 !important}
+.route-care-title{display:none !important}
+.route-care .care-tools{padding:5px !important}
+.route-care .care-actions{display:grid !important;grid-template-columns:minmax(72px,1fr) auto minmax(70px,1fr) !important;gap:4px !important;align-items:center !important;flex-direction:initial !important}
+.route-care .care-start,.route-care .owned-toggle{width:auto !important;min-width:0 !important;min-height:30px !important;padding:4px 6px !important;border-radius:7px !important;font-size:11px !important;white-space:nowrap}
+.route-care .owned-toggle span{gap:4px}
+.route-care .owned-toggle span:before{width:17px !important;height:17px !important;font-size:13px !important;border-radius:5px !important}
+.compact-time{display:inline-flex;min-width:48px;min-height:30px;align-items:center;justify-content:center;padding:3px 5px;border:1px solid #5b466d;border-radius:7px;background:#0e0914;color:#fff;font:900 11px/1.1 ui-monospace,SFMono-Regular,Consolas,monospace}
+.route-care .care-timer{margin-top:5px !important;padding:6px !important;border-radius:8px !important}
+.route-care .care-timer[hidden]{display:none !important}
+.route-care .timer-grid{grid-template-columns:1fr 1fr !important;gap:4px !important}
+.route-care .timer-grid>div{padding:4px !important}
+.route-care .timer-grid span{font-size:9px !important}
+.route-care .timer-grid strong{font-size:12px !important}
+.route-care .timer-meta{display:none !important}
+.route-care .timer-buttons{grid-template-columns:1fr 1fr !important;gap:4px !important;margin-top:5px}
+.route-care .timer-buttons button{min-height:27px !important;padding:3px 4px !important;font-size:10px !important;border-radius:6px !important}
+@media(max-width:520px){.route-care .care-actions{grid-template-columns:1fr auto 1fr !important}.route-care .care-start,.route-care .owned-toggle{font-size:10px !important;padding:3px 4px !important}.compact-time{min-width:43px;font-size:10px}}

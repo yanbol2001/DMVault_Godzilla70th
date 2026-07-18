@@ -1,2 +1,1 @@
-DMVault Godzilla 70th V3.0 RC6.1
-修正進化目標下方的計時與已養過按鈕被固定高度裁切。
+DMVault Godzilla 70th V3.0 RC7 Compact Multi-Device Timer
