@@ -90,3 +90,36 @@
   .route-care .care-start,.route-care .care-countdown{min-height:38px!important}
   .route-care .care-compact-buttons button{min-height:32px!important}
 }
+
+
+/* RC9 single-line timer */
+.care-tools{display:block!important}
+.care-actions{display:block!important}
+.care-start,.care-countdown{height:36px!important;min-height:36px!important}
+.care-countdown{
+ background:transparent!important;
+ color:#222!important;
+ border:1px solid #b8a0aa!important;
+ justify-content:space-between!important;
+ padding:4px 8px!important;
+}
+.care-countdown-label{display:none!important}
+.care-compact-controls{
+ display:inline!important;
+ padding:0!important;
+ margin:0!important;
+}
+.care-compact-controls[hidden]{display:none!important}
+.care-compact-buttons{
+ display:inline-flex!important;
+ gap:4px!important;
+ margin-left:auto!important;
+}
+.care-compact-buttons button{
+ min-height:24px!important;
+ height:24px!important;
+ padding:0 8px!important;
+ font-size:12px!important;
+ color:#222!important;
+}
+.compact-time{font-size:17px!important}
