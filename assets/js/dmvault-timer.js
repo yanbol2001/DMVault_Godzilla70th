@@ -32,7 +32,7 @@ boxes.forEach(box=>{
    if(!state){box.classList.remove('timer-active','timer-complete','timer-frozen');if(countdown)countdown.hidden=true;if(controls)controls.hidden=true;if(start)start.hidden=false;if(time)time.textContent=fmt(duration);return;}
    const remain=Math.max(0,duration-elapsedMs()/1000);
    box.classList.add('timer-active');box.classList.toggle('timer-frozen',!!state.frozen);box.classList.toggle('timer-complete',duration>0&&remain<=0);
-   if(start)start.hidden=true;if(countdown)countdown.hidden=false;if(controls)controls.hidden=false;if(time)time.textContent=duration?fmt(remain):'--:--:--';if(freeze)freeze.textContent=state.frozen?'解除冷凍':'冷凍';
+   if(start)start.hidden=true;if(countdown)countdown.hidden=false;if(controls)controls.hidden=true;if(time)time.textContent=duration?fmt(remain):'--:--:--';if(freeze)freeze.textContent=state.frozen?'解除冷凍':'冷凍';
  }
  start?.addEventListener('click',()=>{state={startedAt:now(),elapsedMs:0,frozen:false};persist();render();});
  freeze?.addEventListener('click',()=>{if(!state)return;if(state.frozen){state.startedAt=now();state.frozen=false}else{state.elapsedMs=elapsedMs();state.startedAt=0;state.frozen=true}persist();render();});
