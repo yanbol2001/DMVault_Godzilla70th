@@ -1,4 +1,4 @@
-DMVault Godzilla 70th V3.0 RC2
+DMVault Godzilla 70th V3.0 RC3
 - 已養過標記改為明顯綠色勾選狀態
 - 進化卡片整體顯示已養過外框與標籤
 - 圖鑑同步顯示已養過綠框與勾勾
