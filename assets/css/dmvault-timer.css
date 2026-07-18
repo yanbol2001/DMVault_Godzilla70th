@@ -99,3 +99,12 @@
 .care-countdown .compact-time{font-size:18px;font-weight:700}
 .care-countdown::after{content:''}
 .care-countdown button,.care-countdown .freeze-btn,.care-countdown .reset-btn{min-height:28px;padding:2px 8px}
+
+/* RC9.1 */
+.route-owned-toggle{width:28px!important;height:28px!important;top:4px!important;right:4px!important;border-radius:8px!important}
+.route-owned-toggle input:checked+span{font-size:18px!important}
+.care-countdown{background:transparent!important;border:0!important;color:#402233!important;justify-content:flex-start!important;padding:0 4px!important}
+.care-countdown-label{display:none!important}
+.care-compact-buttons{display:inline-flex!important;grid-template-columns:none!important;gap:4px!important;margin-left:8px!important}
+.care-compact-buttons button{min-height:24px!important;padding:2px 8px!important;color:#402233!important;background:#fff!important}
+.compact-time{color:#402233!important;font-weight:800!important}
