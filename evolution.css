@@ -451,3 +451,29 @@ body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linea
   }
 }
 
+/* V3.0 RC9.6：實際 route-area 元素已寫入 inline !important。
+   此段只補足桌機與手機容器寬度，所有進化目標永遠不換行。 */
+.evolution-sheet .sheet-row{
+  min-width:0 !important;
+}
+.evolution-sheet .route-area{
+  scrollbar-gutter:stable;
+  overscroll-behavior-x:contain;
+}
+@media (max-width:780px){
+  .evolution-sheet .sheet-row{
+    display:block !important;
+    width:100% !important;
+  }
+  .evolution-sheet .source-panel{
+    width:100% !important;
+    max-width:none !important;
+    border-right:0 !important;
+    border-bottom:3px solid #111 !important;
+  }
+  .evolution-sheet .route-area{
+    width:100% !important;
+    max-width:100% !important;
+  }
+}
+
