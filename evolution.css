@@ -391,3 +391,63 @@ body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linea
     grid-auto-columns:160px !important;
   }
 }
+
+/* V3.0 RC9.5：真正固定單列橫向滑動（桌機／手機共用）
+   改用 flex，徹底排除舊 grid 與響應式規則造成的換行。 */
+.evolution-sheet .route-area{
+  display:flex !important;
+  flex-flow:row nowrap !important;
+  align-items:stretch !important;
+  justify-content:flex-start !important;
+  gap:0 !important;
+  width:auto !important;
+  min-width:0 !important;
+  max-width:100% !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-x:contain;
+  touch-action:pan-x pan-y;
+  scroll-snap-type:x proximity;
+}
+.evolution-sheet .route-area > .route-column{
+  flex:0 0 180px !important;
+  width:180px !important;
+  min-width:180px !important;
+  max-width:180px !important;
+  align-self:stretch !important;
+  scroll-snap-align:start;
+}
+.evolution-sheet .route-area > .no-route{
+  flex:0 0 180px !important;
+  width:180px !important;
+  min-width:180px !important;
+}
+@media(max-width:780px){
+  .evolution-sheet .sheet-row{
+    display:block !important;
+  }
+  .evolution-sheet .source-panel{
+    width:100% !important;
+    max-width:none !important;
+    flex:none !important;
+    border-right:0 !important;
+    border-bottom:3px solid #111 !important;
+  }
+  .evolution-sheet .route-area{
+    display:flex !important;
+    flex-flow:row nowrap !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+  }
+  .evolution-sheet .route-area > .route-column{
+    flex:0 0 180px !important;
+    width:180px !important;
+    min-width:180px !important;
+    max-width:180px !important;
+  }
+  .evolution-sheet .route-fields{
+    grid-template-columns:58px 122px !important;
+  }
+}
+
