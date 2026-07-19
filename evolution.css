@@ -339,141 +339,72 @@ body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linea
   .route-area{grid-template-columns:1fr !important}
 }
 
-
-/* RC9.4：進化目標固定單排，桌機與手機皆改為橫向滑動 */
-.route-area{
-  display:grid !important;
-  grid-template-columns:none !important;
-  grid-auto-flow:column !important;
-  grid-auto-columns:160px !important;
-  grid-template-rows:auto !important;
-  grid-auto-rows:auto !important;
-  justify-content:start !important;
-  align-content:start !important;
-  align-items:start !important;
-  overflow-x:auto !important;
-  overflow-y:hidden !important;
+/* RC9.7：進化目標固定單排，桌機與手機皆以橫向捲動瀏覽 */
+body .evolution-sheet .sheet-row{
   min-width:0 !important;
-  max-width:100% !important;
-  -webkit-overflow-scrolling:touch;
-  overscroll-behavior-x:contain;
-  scrollbar-width:thin;
-}
-.route-column{
-  width:160px !important;
-  min-width:160px !important;
-  max-width:160px !important;
-}
-.route-area .no-route{
-  grid-column:auto !important;
-  width:max(160px,100%) !important;
-  min-width:160px;
-}
-@media(max-width:780px){
-  .route-area{
-    grid-template-columns:none !important;
-    grid-auto-flow:column !important;
-    grid-auto-columns:160px !important;
-    overflow-x:auto !important;
-    overflow-y:hidden !important;
-  }
-  .route-column{
-    width:160px !important;
-    min-width:160px !important;
-    max-width:160px !important;
-  }
-  .route-fields{grid-template-columns:58px 102px !important}
-}
-@media(max-width:440px){
-  .route-area{
-    grid-template-columns:none !important;
-    grid-auto-flow:column !important;
-    grid-auto-columns:160px !important;
-  }
+  overflow:hidden !important;
 }
 
-/* V3.0 RC9.5：真正固定單列橫向滑動（桌機／手機共用）
-   改用 flex，徹底排除舊 grid 與響應式規則造成的換行。 */
-.evolution-sheet .route-area{
+body .evolution-sheet .route-area{
   display:flex !important;
-  flex-flow:row nowrap !important;
-  align-items:stretch !important;
-  justify-content:flex-start !important;
-  gap:0 !important;
+  flex-direction:row !important;
+  flex-wrap:nowrap !important;
+  flex:1 1 auto !important;
   width:auto !important;
   min-width:0 !important;
   max-width:100% !important;
+  align-items:flex-start !important;
+  align-content:flex-start !important;
+  justify-content:flex-start !important;
   overflow-x:auto !important;
   overflow-y:hidden !important;
   -webkit-overflow-scrolling:touch;
   overscroll-behavior-x:contain;
   touch-action:pan-x pan-y;
-  scroll-snap-type:x proximity;
 }
-.evolution-sheet .route-area > .route-column{
-  flex:0 0 180px !important;
-  width:180px !important;
-  min-width:180px !important;
-  max-width:180px !important;
-  align-self:stretch !important;
-  scroll-snap-align:start;
+
+body .evolution-sheet .route-area > .route-column{
+  flex:0 0 160px !important;
+  width:160px !important;
+  min-width:160px !important;
+  max-width:160px !important;
+  margin:0 !important;
 }
-.evolution-sheet .route-area > .no-route{
-  flex:0 0 180px !important;
-  width:180px !important;
-  min-width:180px !important;
+
+body .evolution-sheet .route-area > .no-route{
+  flex:0 0 100% !important;
+  width:100% !important;
 }
-@media(max-width:780px){
-  .evolution-sheet .sheet-row{
+
+@media (max-width:780px){
+  body .evolution-sheet .sheet-row{
     display:block !important;
+    width:100% !important;
   }
-  .evolution-sheet .source-panel{
+
+  body .evolution-sheet .source-panel{
     width:100% !important;
     max-width:none !important;
     flex:none !important;
     border-right:0 !important;
-    border-bottom:3px solid #111 !important;
+    border-bottom:3px solid #8b5cf6 !important;
   }
-  .evolution-sheet .route-area{
+
+  body .evolution-sheet .route-area{
     display:flex !important;
-    flex-flow:row nowrap !important;
+    flex-direction:row !important;
+    flex-wrap:nowrap !important;
+    width:100% !important;
+    max-width:100% !important;
     overflow-x:auto !important;
     overflow-y:hidden !important;
   }
-  .evolution-sheet .route-area > .route-column{
-    flex:0 0 180px !important;
-    width:180px !important;
-    min-width:180px !important;
-    max-width:180px !important;
-  }
-  .evolution-sheet .route-fields{
-    grid-template-columns:58px 122px !important;
-  }
-}
 
-/* V3.0 RC9.6：實際 route-area 元素已寫入 inline !important。
-   此段只補足桌機與手機容器寬度，所有進化目標永遠不換行。 */
-.evolution-sheet .sheet-row{
-  min-width:0 !important;
-}
-.evolution-sheet .route-area{
-  scrollbar-gutter:stable;
-  overscroll-behavior-x:contain;
-}
-@media (max-width:780px){
-  .evolution-sheet .sheet-row{
-    display:block !important;
-    width:100% !important;
-  }
-  .evolution-sheet .source-panel{
-    width:100% !important;
-    max-width:none !important;
-    border-right:0 !important;
-    border-bottom:3px solid #111 !important;
-  }
-  .evolution-sheet .route-area{
-    width:100% !important;
-    max-width:100% !important;
+  body .evolution-sheet .route-area > .route-column{
+    flex:0 0 160px !important;
+    width:160px !important;
+    min-width:160px !important;
+    max-width:160px !important;
   }
 }
 
