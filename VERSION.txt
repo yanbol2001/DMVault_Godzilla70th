@@ -1,2 +1,3 @@
 DMVault Godzilla 70th V3.0 RC9.3
 Timer: true single-row countdown + freeze/reset
+RC9.4：進化頁所有目標卡固定單排，桌機與手機皆以橫向滑動瀏覽。

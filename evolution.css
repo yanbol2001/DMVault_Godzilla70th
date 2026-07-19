@@ -338,3 +338,56 @@ body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linea
 @media(max-width:440px){
   .route-area{grid-template-columns:1fr !important}
 }
+
+
+/* RC9.4：進化目標固定單排，桌機與手機皆改為橫向滑動 */
+.route-area{
+  display:grid !important;
+  grid-template-columns:none !important;
+  grid-auto-flow:column !important;
+  grid-auto-columns:160px !important;
+  grid-template-rows:auto !important;
+  grid-auto-rows:auto !important;
+  justify-content:start !important;
+  align-content:start !important;
+  align-items:start !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  min-width:0 !important;
+  max-width:100% !important;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-x:contain;
+  scrollbar-width:thin;
+}
+.route-column{
+  width:160px !important;
+  min-width:160px !important;
+  max-width:160px !important;
+}
+.route-area .no-route{
+  grid-column:auto !important;
+  width:max(160px,100%) !important;
+  min-width:160px;
+}
+@media(max-width:780px){
+  .route-area{
+    grid-template-columns:none !important;
+    grid-auto-flow:column !important;
+    grid-auto-columns:160px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+  }
+  .route-column{
+    width:160px !important;
+    min-width:160px !important;
+    max-width:160px !important;
+  }
+  .route-fields{grid-template-columns:58px 102px !important}
+}
+@media(max-width:440px){
+  .route-area{
+    grid-template-columns:none !important;
+    grid-auto-flow:column !important;
+    grid-auto-columns:160px !important;
+  }
+}
