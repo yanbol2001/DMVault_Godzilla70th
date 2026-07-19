@@ -408,3 +408,58 @@ body .evolution-sheet .route-area > .no-route{
   }
 }
 
+/* RC9.8：桌機與手機的進化目標一律單列橫向滑動 */
+.evolution-sheet > .sheet-row{
+  min-width:0 !important;
+}
+
+.evolution-sheet > .sheet-row > .route-area{
+  display:flex !important;
+  flex-flow:row nowrap !important;
+  align-items:stretch !important;
+  justify-content:flex-start !important;
+  min-width:0 !important;
+  max-width:100% !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-x:contain;
+  touch-action:pan-x pan-y;
+}
+
+.evolution-sheet > .sheet-row > .route-area > .route-column{
+  flex:0 0 160px !important;
+  width:160px !important;
+  min-width:160px !important;
+  max-width:160px !important;
+}
+
+@media (max-width:780px){
+  .evolution-sheet > .sheet-row{
+    display:block !important;
+    width:100% !important;
+  }
+
+  .evolution-sheet > .sheet-row > .source-panel{
+    width:100% !important;
+    max-width:none !important;
+    border-right:0 !important;
+  }
+
+  .evolution-sheet > .sheet-row > .route-area{
+    display:flex !important;
+    flex-flow:row nowrap !important;
+    width:100% !important;
+    max-width:100% !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+  }
+
+  .evolution-sheet > .sheet-row > .route-area > .route-column{
+    flex:0 0 160px !important;
+    width:160px !important;
+    min-width:160px !important;
+    max-width:160px !important;
+  }
+}
+
